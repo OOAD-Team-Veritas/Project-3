@@ -6,7 +6,10 @@ Joshua Khoo
 Elizabeth Robinson  
 Riad Shash (Ray)
 
-+ a) Simple Factory Pattern used to create tools!
++  Simple Factory Pattern used to create tools!
 
 Our Java classes
 [project3 Classes](/Project-3/src/main/java/com/ooadteamveritas/project3)
+
+## JUnit tests:
+[JUnit test classes](/Project-3/src/test/java/com/ooadteamveritas/project3)
