@@ -1,6 +1,6 @@
 package com.ooadteamveritas.project3;
 
-//Product interface (factory pattern)
+//Product interface (Simple factory pattern)
 public abstract class Tool {
     protected double price;
     protected String name;
