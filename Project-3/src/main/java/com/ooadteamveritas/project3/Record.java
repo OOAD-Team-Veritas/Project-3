@@ -6,7 +6,13 @@ public class Record{
     private Vector<int> addedOptions = new Vector<int>();
     private int nightsUntilDue;
     private Customer customer;
-    private double totalCost = 0;
+    private double totalCost;
+    public int recordId;            //Unique record ID
+    
+    public Record(int num){
+        totalCost = 0;
+        recordId = num;
+    }
     
     public Vector<Tool> getRentedTools(){
         return this.rentedTools;
@@ -35,6 +41,13 @@ public class Record{
     public Customer getCustomer(){
         return this.customer;
     }
- 
+    
+    //Overriding toString() Method
+    public String toString() {
+       StringBuffer sb = new StringBuffer();
+       sb.append("*****Record #" + recordId + "*****\n");
+       sb.append("Customer name: ");
+       return sb.toString();
+    }
 }
 
