@@ -5,6 +5,7 @@ public abstract class Tool {
     protected double price;
     protected String name;
     protected String category;
+    protected String description;
     
     public double getPrice(){
         return this.price;

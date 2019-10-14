@@ -3,14 +3,25 @@ import java.util.*;
 
 public class Record{
     private Vector<Tool> rentedTools = new Vector<Tool>();
+    private Vector<int> addedOptions = new Vector<int>();
     private int nightsUntilDue;
     private Customer customer;
+    private double totalCost = 0;
     
     public Vector<Tool> getRentedTools(){
         return this.rentedTools;
     }
-    public void addRentedTool(Tool tool){
-        this.rentedTools.add(tool);
+    public void addRentedTools(Vector<Tool> tools){
+        this.rentedTools.addAll(tools);
+    }
+    public void addOptions(Vector<String> addOns){
+        this.addedOptions.addAll(addOns);
+    }
+    public void updateTotalCost(double total){
+        this.totalCost = this.totalCost + total;
+    }
+    public double getTotalCost(){
+        return this.totalCost;
     }
     public int getNightsUntilDue(){
         return this.nightsUntilDue;

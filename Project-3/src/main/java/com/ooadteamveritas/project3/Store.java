@@ -22,15 +22,38 @@ public class Store extends Observable {
     public Vector<Tool> getInventory(){
         return this.inventory;
     }
-    public void startRental(Record record, Tool tool){
+    public void startRental(Record record, Vector<Tool> tools){
         this.currentRentalRecords.add(record);
-        this.inventory.remove(tool);
-        
+        tools.forEach((tool) -> this.inventory.remove(tool));
+        if(inventory.isEmpty()){
+            setValue(false);
+        }
     }
-    public void endRental(Record record, Tool tool){
+    public void addtoRental(Record record, Vector<Tool> tools){
+        record.addRentedTools(tools);
+        tools.forEach((tool) -> this.inventory.remove(tool));
+        if(inventory.isEmpty()){
+            setValue(false);
+        }
+    }
+    public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
-        this.inventory.add(tool);
+        record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
+    }
+    public double calculateCost(Vector<?> vector){
+        
+    }
+    public double getOptionPrice(int option){//Maybe this should be in Store class?
+        switch(option){
+            case 1 : //extension cord
+                return 2.25;
+            case 2 : //accessory kit
+                return 5.09;
+            case 3 : //protective gear package
+                return 9.99;
+            
+        }
     }
     public void setValue(boolean n){
         this.isInventory = n;
