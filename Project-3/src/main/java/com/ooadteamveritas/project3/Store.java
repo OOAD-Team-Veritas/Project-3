@@ -31,7 +31,10 @@ public class Store extends Observable {
     }
     public void addtoRental(Record record, Vector<Tool> tools){
         record.addRentedTools(tools);
-        tools.forEach((tool) -> this.inventory.remove(tool));
+        tools.forEach((tool) -> {
+            this.inventory.remove(tool);
+            
+                });
         if(inventory.isEmpty()){
             setValue(false);
         }
@@ -41,9 +44,11 @@ public class Store extends Observable {
         this.pastRentalRecords.add(record);
         record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
     }
+    /*
     public double calculateCost(Vector<?> vector){
         
     }
+    */
     public double getOptionPrice(int option){//Maybe this should be in Store class?
         switch(option){
             case 1 : //extension cord
@@ -52,7 +57,8 @@ public class Store extends Observable {
                 return 5.09;
             case 3 : //protective gear package
                 return 9.99;
-            
+            default:
+                return 0;
         }
     }
     public void setValue(boolean n){

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Record{
     private Vector<Tool> rentedTools = new Vector<Tool>();
-    private Vector<int> addedOptions = new Vector<int>();
+    // private Vector<int> addedOptions = new Vector<int>();
     private int nightsUntilDue;
     private Customer customer;
     private double totalCost;
@@ -21,7 +21,7 @@ public class Record{
         this.rentedTools.addAll(tools);
     }
     public void addOptions(Vector<String> addOns){
-        this.addedOptions.addAll(addOns);
+        // this.addedOptions.addAll(addOns);
     }
     public void updateTotalCost(double total){
         this.totalCost = this.totalCost + total;
