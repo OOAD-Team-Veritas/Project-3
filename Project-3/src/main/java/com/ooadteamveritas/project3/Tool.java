@@ -19,8 +19,7 @@ public abstract class Tool {
     }
     
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append(name);
-        return sb.toString();
+        StringBuffer display = new StringBuffer();
+        return display.toString();
     }
 }

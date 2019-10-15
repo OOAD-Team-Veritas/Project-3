@@ -20,6 +20,7 @@ public class Record{
     public void addRentedTools(Vector<Tool> tools){
         this.rentedTools.addAll(tools);
     }
+
     public void addOptions(Vector<int> addOns){
         if(addOns.size() != 0){
             addOns.forEach((option) -> incrementAddedOptions(option - 1));
