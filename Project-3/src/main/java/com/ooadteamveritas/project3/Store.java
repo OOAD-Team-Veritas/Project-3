@@ -7,11 +7,15 @@ import java.util.*;
 public class Store extends Observable {
     private static Store uniqueInstance;
     private boolean isInventory;
-    private Vector<Tool> inventory = new Vector<Tool>();
-    private Vector<Record> currentRentalRecords = new Vector<Record>();
-    private Vector<Record> pastRentalRecords = new Vector<Record>();
+    private Vector<Tool> inventory;
+    private Vector<Record> currentRentalRecords;
+    private Vector<Record> pastRentalRecords;
     
-    private Store(){}
+    private Store(){
+        inventory = new Vector<Tool>();
+        currentRentalRecords = new Vector<Record>();
+        pastRentalRecords = new Vector<Record>();
+    }
     
     public static Store getInstance(){
         if(uniqueInstance == null){
@@ -51,18 +55,6 @@ public class Store extends Observable {
     }
     */
 
-    public double getOptionPrice(int option){//Maybe this should be in Store class?
-        switch(option){
-            case 1 : //extension cord
-                return 2.25;
-            case 2 : //accessory kit
-                return 5.09;
-            case 3 : //protective gear package
-                return 9.99;
-            default:
-                return 0;
-        }
-    }
     public void setValue(boolean n){
         this.isInventory = n;
         setChanged();
@@ -70,6 +62,10 @@ public class Store extends Observable {
     }
     public boolean getValue(){
         return this.isInventory;
+    }
+    
+    public void addTool(Tool newTool){
+        this.inventory.add(newTool);
     }
 }
 
