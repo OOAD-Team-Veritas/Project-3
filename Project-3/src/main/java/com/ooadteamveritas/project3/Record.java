@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Record{
     private Vector<Tool> rentedTools = new Vector<Tool>();
-    private Vector<int> addedOptions = new Vector<int>();
+    private Vector<Option> addedOptions = new Vector<Option>();
     private int nightsUntilDue;
     private Customer customer;
     private double totalCost;
@@ -20,8 +20,13 @@ public class Record{
     public void addRentedTools(Vector<Tool> tools){
         this.rentedTools.addAll(tools);
     }
-    public void addOptions(Vector<String> addOns){
-        this.addedOptions.addAll(addOns);
+    public void addOptions(Vector<int> addOns){
+        if(addOns.size() != 0){
+            addOns.forEach((option) -> incrementAddedOptions(option - 1));
+        }
+    }
+    public void incrementAddedOptions(int index){
+        this.addedOptions.get().count += 1;
     }
     public void updateTotalCost(double total){
         this.totalCost = this.totalCost + total;

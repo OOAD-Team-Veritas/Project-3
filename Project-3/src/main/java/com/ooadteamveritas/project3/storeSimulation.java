@@ -12,7 +12,8 @@ import java.util.Vector;
 public class storeSimulation {
     
     private int simulationNights;
-    private Vector<Customer> toolRenalCustomers;
+    private Vector<Customer> toolRentalCustomers;
+    
     
     public storeSimulation(){
         simulationNights = 1;
@@ -25,3 +26,7 @@ public class storeSimulation {
         
     }
 }
+//make customers
+//make tools
+//make options
+

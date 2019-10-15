@@ -41,9 +41,6 @@ public class Store extends Observable {
         this.pastRentalRecords.add(record);
         record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
     }
-    public double calculateCost(Vector<?> vector){
-        
-    }
     public double getOptionPrice(int option){//Maybe this should be in Store class?
         switch(option){
             case 1 : //extension cord
