@@ -9,7 +9,15 @@ public abstract class StoreOption {
        return count; 
     }
     
-    //Gets the total
+    public void setCount(int newCount){
+        this.count = newCount;
+    }
+    
+    public void incrementCount(){
+        this.count++;
+    }
+    
+    //Gets the total value of this option
     public double getValue(){
         return cost * count;
     }

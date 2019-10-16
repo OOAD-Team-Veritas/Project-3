@@ -4,7 +4,12 @@ package com.ooadteamveritas.project3;
 public abstract class Tool {
     protected double price;
     protected String name;
-    protected String category;
+    protected String category;          //What category it belongs to...
+    public boolean rentedOut;           //Is the tool curretly rented out?
+    
+    public Tool(){
+        this.rentedOut = false;
+    }
     
     public double getPrice(){
         return this.price;
@@ -21,5 +26,9 @@ public abstract class Tool {
     public String toString() {
         StringBuffer display = new StringBuffer();
         return display.toString();
+    }
+    
+    public boolean isRented(){
+        return rentedOut;
     }
 }

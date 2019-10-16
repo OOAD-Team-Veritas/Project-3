@@ -7,14 +7,15 @@ import java.util.*;
 public class Store extends Observable {
     private static Store uniqueInstance;
     private boolean isInventory;
-    private Vector<Tool> inventory;
-    private Vector<Record> currentRentalRecords;
-    private Vector<Record> pastRentalRecords;
+    private ArrayList<Tool> inventory;
+    private ArrayList<Record> currentRentalRecords;
+    private ArrayList<Record> pastRentalRecords;
     
+    //Constructor
     private Store(){
-        inventory = new Vector<Tool>();
-        currentRentalRecords = new Vector<Record>();
-        pastRentalRecords = new Vector<Record>();
+        inventory = new ArrayList<Tool>();
+        currentRentalRecords = new ArrayList<Record>();
+        pastRentalRecords = new ArrayList<Record>();
     }
     
     public static Store getInstance(){
@@ -23,7 +24,7 @@ public class Store extends Observable {
         }
         return uniqueInstance;
     }
-    public Vector<Tool> getInventory(){
+    public ArrayList<Tool> getInventory(){
         return this.inventory;
     }
     public void startRental(Record record, Vector<Tool> tools){
@@ -49,12 +50,6 @@ public class Store extends Observable {
         record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
     }
 
-    /*
-    public double calculateCost(Vector<?> vector){
-        
-    }
-    */
-
     public void setValue(boolean n){
         this.isInventory = n;
         setChanged();
@@ -64,30 +59,28 @@ public class Store extends Observable {
         return this.isInventory;
     }
     
+    //Adds a tool to the inventory (used my simulation)
     public void addTool(Tool newTool){
         this.inventory.add(newTool);
     }
+    
+    //Checks if there is available inventoy to rent (at least one)
+    public boolean checkIfAvailInventory(){
+        boolean avail = false;
+        for(Tool tool : inventory){
+            if(tool.isRented() == false)
+                avail = true;
+        }
+        return avail;
+    }
+    
+    //Returns the count of tools that can be rented
+    public int howManyAvailToolsToRent(){
+        int count = 0;
+        for(Tool tool : inventory){
+            if(tool.isRented() == false)
+                count++;
+        }
+        return count;
+    }
 }
-
-
-//Example of Java Observable implementation
-//import java.util.Observable;
-//public class ObservableValue extends Observable
-//{
-//   private int n = 0;
-//   public ObservableValue(int n)
-//   {
-//      this.n = n;
-//   }
-//   public void setValue(int n)
-//   {
-//      this.n = n;
-//      setChanged();
-//      notifyObservers();
-//   }
-//   public int getValue()
-//   {
-//      return n;
-//   }
-//}
-

@@ -84,13 +84,34 @@ public class storeSimulation {
                     //We have to check if we're not getting the same customer
                     selectedCustomer = getRandomCustomer();
                     while(checkIfAlreadySelected(selectedCustomer,selectedDayCustomers)){
-                        //Select another one...
+                        //Select another one if we already got that one...
                         selectedCustomer = getRandomCustomer();
                     }
                 }
                 
-                //Now we already have our selected customer in selectedDayCustomers
+                //Now we already have our selected customers in selectedDayCustomers
                 
+                //For every selected customer =>
+                for(Customer cust : selectedDayCustomers){
+                    
+                    
+                    //Check if the customer can enter the store... (observer stuff)
+                    if((cust.howManyToolsRented() < 3 ) && canCustomerEnterStore(cust)){
+                        
+                        //If yes, then we look at what kind of customer it is...                       
+                        
+                        //Depending on the customer, we determine how many tools to rent (randomly)
+
+                        //Check if the customer already has a record
+                            //If not... then create one for them and add referecnes 
+
+                        //Add the selected tools to the record
+
+                        //Update Customer's count of rented tools
+                        
+                    }
+            
+                }
             }
             
         }  
@@ -107,17 +128,40 @@ public class storeSimulation {
         return rentalCustomers.get(randIndex); 
     } 
     
+    //Tells you how many customers will arrive in a day
     public int genTodaysCustNum(){
         return genRandomNum(0,12);
     }
     
+    //Check if we selected a Customer twice (look above)
     public boolean checkIfAlreadySelected(Customer selected, ArrayList<Customer> selectedDayCustomers){
         for(Customer cust: selectedDayCustomers){
+            //== compares object references, it checks to see if the two operands point to the same object 
             if(cust == selected)
                 return true;
         }
         return false;
-    }
+    } 
     
-   
+    //Might be overkill... Made it more "specific" just in case we need to add more stuff
+    private boolean canCustomerEnterStore(Customer cust){
+        boolean result = true;
+        if(cust.getCustType() == "business"){
+            //We have a business cusotmer...
+            if(rentalStore.howManyAvailToolsToRent() < 3){
+                result = false;
+            }
+        }else if(cust.getCustType() == "regular"){
+            //We have a regualar cusotmer...
+            if(rentalStore.checkIfAvailInventory() == false){
+                result = false;
+            }  
+        }else if(cust.getCustType() == "casual"){
+            //We have a casual cusotmer...
+            if(rentalStore.checkIfAvailInventory() == false){
+                result = false;
+            }  
+        }
+        return result;
+    }
 }
