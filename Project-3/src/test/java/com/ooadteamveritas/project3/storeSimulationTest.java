@@ -5,6 +5,7 @@
  */
 package com.ooadteamveritas.project3;
 
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,15 +42,29 @@ public class storeSimulationTest {
      * Test of runSimulation method, of class storeSimulation.
      */
     @Test
-    public void testRunSimulation() {
-        boolean test = true;
-        storeSimulation instance = new storeSimulation(5,5);
-        double ranVal = instance.genRandomNum(1, 4);
-        for(int i=0; i < 20; i++){
-            ranVal = instance.genRandomNum(1, 4);
-            if((ranVal >  4)||( ranVal < 1))
-                test = false;     
-        }
+    public void testcheckIfAlreadySelectedCase1() {
+        ArrayList<Customer> CustomerList = new ArrayList<Customer>(); 
+        Customer cust1 = new RegularCustomer("Regular 1");
+        Customer cust2 = new RegularCustomer("Regular 2");
+        
+        CustomerList.add(cust1);
+        
+        storeSimulation instance = new storeSimulation(34,4);
+        boolean test = instance.checkIfAlreadySelected(cust2, CustomerList); 
+        System.out.println(test);
+        assertFalse(test);
+    }
+    
+    @Test
+    public void testcheckIfAlreadySelectedCase2() {
+        ArrayList<Customer> CustomerList = new ArrayList<Customer>(); 
+        Customer cust1 = new RegularCustomer("Regular 1");
+        
+        CustomerList.add(cust1);
+        
+        storeSimulation instance = new storeSimulation(34,4);
+        boolean test = instance.checkIfAlreadySelected(cust1, CustomerList); 
+        System.out.println(test);
         assertTrue(test);
     }
     

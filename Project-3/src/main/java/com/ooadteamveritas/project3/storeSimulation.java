@@ -6,26 +6,29 @@
     4. Each day, random number of customers visit store (if tools to rent)
     5. Each customer creates 1 record per rental period
     6. No customer will show up then leave without making rental
+
+    * Process each customer one at a time (they might take the tools)
+
 */
 
 package com.ooadteamveritas.project3;
+import java.util.ArrayList;
 import java.util.Vector;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class storeSimulation {
     
-    private int simulationNights;
-    private int numCustomers;
-    private int numTools;
-    private Vector<Customer> rentalCustomers;
-    private Store rentalStore ;
-    private SimpleToolFactory toolFactory;
+    private int simulationNights;       //For testing (how many nights)
+    private int numCustomers;               //For testing (how much of each catergory) 
+    private ArrayList<Customer> rentalCustomers;    //Our Customers
+    private Store rentalStore ; //The rental store with Tools
+    private SimpleToolFactory toolFactory;  //Tool factory
     
     //simNight = 34, numCustomerTypes = 4 because (4 * 3 = 12)
     public storeSimulation(int simNights, int numCustomerTypes){
         this.simulationNights = simNights;
         this.numCustomers = numCustomers;     
-        this.rentalCustomers = new Vector<Customer>();
+        this.rentalCustomers = new ArrayList<Customer>();
         this.toolFactory = new SimpleToolFactory();
         
         
@@ -58,13 +61,63 @@ public class storeSimulation {
         }        
     }
     
-    public void runSimulation(){   
+    public void runSimulation(){
+        int todaysCustomerNum = 0;       //Number of customers arriving in a day
+        Customer selectedCustomer;
+        ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();
         
+        
+        //Loop for the nights in the simulation...
+        for(int i = 0; i < simulationNights; i++){
+            
+            //Generate Random number of customers that will arrive today
+            todaysCustomerNum = genTodaysCustNum();
+            
+            //Pick random customers that will enter the store...
+            for(int j = 0; j < todaysCustomerNum; i++){
+                            
+                //Check if our Arraylist of selected customers in empty...
+                if(!selectedDayCustomers.isEmpty()){
+                    //If empty... add the customer to out selected list
+                    selectedDayCustomers.add(getRandomCustomer());
+                }else{
+                    //We have to check if we're not getting the same customer
+                    selectedCustomer = getRandomCustomer();
+                    while(checkIfAlreadySelected(selectedCustomer,selectedDayCustomers)){
+                        //Select another one...
+                        selectedCustomer = getRandomCustomer();
+                    }
+                }
+                
+                //Now we already have our selected customer in selectedDayCustomers
+                
+            }
+            
+        }  
     }
     
     //min -> inclusive
     //max -> inclusive
-    public int genRandomNum(int min,int max){
+    private int genRandomNum(int min,int max){
         return ThreadLocalRandom.current().nextInt(min,max+1);
     }
+    
+    public Customer getRandomCustomer() { 
+        int randIndex = genRandomNum(0,26);
+        return rentalCustomers.get(randIndex); 
+    } 
+    
+    public int genTodaysCustNum(){
+        return genRandomNum(0,12);
+    }
+    
+    public boolean checkIfAlreadySelected(Customer selected, ArrayList<Customer> selectedDayCustomers){
+        for(Customer cust: selectedDayCustomers){
+            if(cust == selected)
+                return true;
+        }
+        return false;
+    }
+    
+   
 }
