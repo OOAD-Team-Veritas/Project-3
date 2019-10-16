@@ -90,8 +90,11 @@ public class Store extends Observable {
     }
 
     /*
-    Gets the first rentable tools from the store inventory and 
-    returns as an ArrayList of tools
+    ============================================================================
+                            selectedNTools
+        Gets the first rentable tools from the store inventory and 
+        returns as an ArrayList of tools
+    ============================================================================
     */
     public ArrayList<Tool> selectedNTools(int n){
         int count = 0;
@@ -109,7 +112,11 @@ public class Store extends Observable {
         return selectedTools;
     }
 
-    //Might be overkill... Made it more "specific" just in case we need to add more stuff
+    /*
+    ============================================================================
+                            canCustomerEnterStore
+    ============================================================================
+    */
     public boolean canCustomerEnterStore(Customer cust){
         boolean result = true;
 

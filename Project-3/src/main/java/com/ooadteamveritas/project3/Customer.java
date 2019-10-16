@@ -43,7 +43,42 @@ public abstract class Customer {
     protected int genRandomNum(int min,int max){
         return ThreadLocalRandom.current().nextInt(min,max+1);
     }
+
+    //They can rant 0 - 6 options
+    public int howManyOptionsToRent(){
+        return this.genRandomNum(0,6);
+    }
     
+    
+    /*
+        Generates n random number from 1-3
+        where:
+
+        1 -> Extension Cord
+        2 -> AccessoryKit
+        3 -> Protective Gear Package
+
+        It sets the appropriate count in the option classes
+        in the record object
+    */
+    public void pickOptionsToRent(int n){
+        int randomNum;
+        for(int i=0; i < n; i++){
+            randomNum = genRandomNum(1, 3);
+            switch(randomNum){
+                case 1:
+                    record.options.get(1).count++;
+                    break;
+                case 2:
+                    record.options.get(2).count++;
+                    break;
+                case 3:
+                    record.options.get(3).count++;
+                    break;
+            }
+        }
+    }
+
     //Returns how many tools customer wants to rent
     public abstract int howManyToolsToRent();
     public abstract int rentDuration();

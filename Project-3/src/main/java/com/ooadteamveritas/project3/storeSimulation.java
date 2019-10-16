@@ -10,6 +10,7 @@
     8. 
 
     * Process each customer one at a time (they might take the tools)
+
 */
 
 package com.ooadteamveritas.project3;
@@ -109,7 +110,7 @@ public class storeSimulation {
                     
                     //Check if the customer can enter the store... (observer stuff)
                     /*
-                        Check what kind of cust it is...
+                        Check what kind of cust is it...
                         Check the amount of tools they already rented
                     */
                     if(rentalStore.canCustomerEnterStore(cust)){
@@ -118,6 +119,7 @@ public class storeSimulation {
                         //Depending on the customer, we determine how many tools to rent (randomly)
                         int rentDuration = cust.rentDuration();
                         int numOfTools = cust.howManyToolsToRent();
+                        int numOfOptions = cust.howManyOptionsToRent();   
 
                         //Account for situations where customer alreay rented some tools (max is 3...)
                         numOfTools = numOfTools - cust.howManyToolsRented();
@@ -145,8 +147,10 @@ public class storeSimulation {
                         cust.hasActiveRental = true;
 
                         //Determine what options the customer wants...
+                        cust.pickOptionsToRent(numOfOptions);
                         
                         //Calculate the cost of everything...
+                        
                     }else{
                         //Customer can't enter store - get another customer...
                         continue;
@@ -171,7 +175,12 @@ public class storeSimulation {
     public int genTodaysCustNum(){
         return genRandomNum(0,12);
     }
-    
+
+    /*
+    ============================================================================
+                        checkIfAlreadySelectedCust
+    ============================================================================
+    */
     //Check if we selected a Customer twice (look above)
     public boolean checkIfAlreadySelectedCust(Customer selected, ArrayList<Customer> selectedDayCustomers){
         for(Customer cust: selectedDayCustomers){

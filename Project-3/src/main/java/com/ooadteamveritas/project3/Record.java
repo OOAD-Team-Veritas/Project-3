@@ -10,7 +10,7 @@ public class Record{
     public int recordId;            //Unique record ID
     
     //The options live here (only one instace)
-    private ArrayList<StoreOption> options = new ArrayList<StoreOption>();
+    public ArrayList<StoreOption> options = new ArrayList<StoreOption>();
     
     //Constuctor
     public Record(){
