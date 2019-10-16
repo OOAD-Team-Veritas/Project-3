@@ -96,12 +96,13 @@ public class storeSimulation {
                     
                     
                     //Check if the customer can enter the store... (observer stuff)
-                    if((cust.howManyToolsRented() < 3 ) && canCustomerEnterStore(cust)){
+                    if(canCustomerEnterStore(cust)){
                         
-                        //If yes, then we ask customer how many tools the want to rent (method in their classes)                      
-                        
+                        //If yes, then we ask customer how many tools the want to rent (method in their classes)
                         //Depending on the customer, we determine how many tools to rent (randomly)
-
+                        int rentDuration = cust.howManyToolsToRent();
+                        int numOfTools = cust.rentDuration();
+                        
                         //Check if the customer already has a record
                             //If not... then create one for them and add referecnes 
 
