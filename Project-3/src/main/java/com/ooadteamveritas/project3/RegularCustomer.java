@@ -1,3 +1,8 @@
+/*
+    1. Regualar customers rent 1-3 tools
+    2. Regualar customers always rent 3-5 days
+*/
+
 package com.ooadteamveritas.project3;
 
 import java.util.Random;
@@ -11,8 +16,11 @@ public class RegularCustomer extends Customer {
         this.custType = "regular";
     }
     
-    @Override
-    public void rent() {
+    public int howManyToolsToRent(){
+        return this.genRandomNum(1,3);
+    } 
 
+    public int rentDuration(){
+        return this.genRandomNum(3,5);
     }
 }

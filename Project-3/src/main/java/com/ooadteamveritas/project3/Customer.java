@@ -1,4 +1,5 @@
 package com.ooadteamveritas.project3;
+import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Customer {
     protected String name;
@@ -28,6 +29,14 @@ public abstract class Customer {
     public int howManyToolsRented(){
         return record.rentedTools.size();
     }
+
+    //min -> inclusive
+    //max -> inclusive
+    protected int genRandomNum(int min,int max){
+        return ThreadLocalRandom.current().nextInt(min,max+1);
+    }
     
-    public abstract void rent();
+    //Returns how many tools customer wants to rent
+    public abstract int howManyToolsToRent();
+    public abstract int rentDuration();
 }
