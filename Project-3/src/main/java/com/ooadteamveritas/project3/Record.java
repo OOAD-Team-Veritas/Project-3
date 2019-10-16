@@ -1,8 +1,8 @@
 package com.ooadteamveritas.project3;
-import java.util.*;
+import java.util.ArrayList;
 
 public class Record{
-    public Vector<Tool> rentedTools = new Vector<Tool>();
+    public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
     
     private int nightsUntilDue;
     private Customer customer;       //Customer associated with this record   
@@ -13,9 +13,8 @@ public class Record{
     private ArrayList<StoreOption> options = new ArrayList<StoreOption>();
     
     //Constuctor
-    public Record(int num){
+    public Record(){
         totalCost = 0;
-        recordId = num;
         
         //Add the options
         options.add(new ExtensionCord());
@@ -23,12 +22,16 @@ public class Record{
         options.add(new ProtectiveGearPackage());
     }
     
-    public Vector<Tool> getRentedTools(){
+    public ArrayList<Tool> getRentedTools(){
         return this.rentedTools;
     }
     
-    public void addRentedTools(Vector<Tool> tools){
+    public void addRentedTools(ArrayList<Tool> tools){
         this.rentedTools.addAll(tools);
+    }
+
+    public void setCustomer(Customer cust){
+        this.customer = cust;
     }
     
     public void updateTotalCost(double total){

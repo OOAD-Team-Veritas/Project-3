@@ -7,7 +7,7 @@ import java.util.*;
 public class Store extends Observable {
     private static Store uniqueInstance;
     private boolean isInventory;
-    private ArrayList<Tool> inventory;
+    public ArrayList<Tool> inventory;
     private ArrayList<Record> currentRentalRecords;
     private ArrayList<Record> pastRentalRecords;
     
@@ -18,15 +18,18 @@ public class Store extends Observable {
         pastRentalRecords = new ArrayList<Record>();
     }
     
+    //Singleton => getInstance
     public static Store getInstance(){
         if(uniqueInstance == null){
             uniqueInstance = new Store();
         }
         return uniqueInstance;
     }
+
     public ArrayList<Tool> getInventory(){
         return this.inventory;
     }
+
     public void startRental(Record record, Vector<Tool> tools){
         this.currentRentalRecords.add(record);
         tools.forEach((tool) -> this.inventory.remove(tool));
@@ -34,6 +37,7 @@ public class Store extends Observable {
             setValue(false);
         }
     }
+    /*
     public void addtoRental(Record record, Vector<Tool> tools){
         record.addRentedTools(tools);
         tools.forEach((tool) -> {
@@ -49,6 +53,7 @@ public class Store extends Observable {
         this.pastRentalRecords.add(record);
         record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
     }
+    */
 
     public void setValue(boolean n){
         this.isInventory = n;
@@ -59,7 +64,7 @@ public class Store extends Observable {
         return this.isInventory;
     }
     
-    //Adds a tool to the inventory (used my simulation)
+    //Adds a tool to the inventory (used by simulation)
     public void addTool(Tool newTool){
         this.inventory.add(newTool);
     }
@@ -82,5 +87,55 @@ public class Store extends Observable {
                 count++;
         }
         return count;
+    }
+
+    /*
+    Gets the first rentable tools from the store inventory and 
+    returns as an ArrayList of tools
+    */
+    public ArrayList<Tool> selectedNTools(int n){
+        int count = 0;
+        ArrayList<Tool> selectedTools = new ArrayList<Tool>();
+
+        for(Tool tool : inventory){
+
+            if(tool.rentedOut == false){
+                if(count < n){
+                    count++;
+                    selectedTools.add(tool);
+                }     
+            }
+        }
+        return selectedTools;
+    }
+
+    //Might be overkill... Made it more "specific" just in case we need to add more stuff
+    public boolean canCustomerEnterStore(Customer cust){
+        boolean result = true;
+
+        //Check if cust rented the max amount of tools (if they already have a record)
+        if(cust.hasActiveRental == true){
+            if(cust.howManyToolsRented() >= 3){
+                result = false;
+            }
+        }
+        
+        if(cust.getCustType() == "business"){
+            //We have a business cusotmer...
+            if(howManyAvailToolsToRent() < 3){
+                result = false;
+            }
+        }else if(cust.getCustType() == "regular"){
+            //We have a regualar cusotmer...
+            if(checkIfAvailInventory() == false){
+                result = false;
+            }  
+        }else if(cust.getCustType() == "casual"){
+            //We have a casual cusotmer...
+            if(checkIfAvailInventory() == false){
+                result = false;
+            }  
+        }
+        return result;
     }
 }

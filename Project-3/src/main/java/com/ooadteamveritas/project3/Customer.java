@@ -1,6 +1,10 @@
 package com.ooadteamveritas.project3;
 import java.util.concurrent.ThreadLocalRandom;
 
+/*
+    The count of tools is determined by looking at the record...
+*/
+
 public abstract class Customer {
     protected String name;
     protected Record record;
@@ -19,13 +23,17 @@ public abstract class Customer {
     public void setActiveRecord(Record record){
         this.record = record;
     }
+
+    public Record getCustomerRecord(){
+        return record;
+    }
     
     //When Customer is done with a rental transaction
     public void clearRecord(){
         this.record = null;
     }
     
-    //Returns how many tools customer is renting right now
+    //Returns how many tools customer is renting right now  (from their record)
     public int howManyToolsRented(){
         return record.rentedTools.size();
     }

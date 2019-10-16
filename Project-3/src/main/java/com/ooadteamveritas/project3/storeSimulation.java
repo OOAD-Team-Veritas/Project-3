@@ -5,10 +5,11 @@
     3. Store has 24 different tool to rent, spread across 5 different categories
     4. Each day, random number of customers visit store (if tools to rent)
     5. Each customer creates 1 record per rental period
-    6. No customer will show up then leave without making rental
+    6. No customer will show up then leave without making rental (observer stuff?)
+    7. Each customer rents a max of 3 tools no matter what category they belong to!
+    8. 
 
     * Process each customer one at a time (they might take the tools)
-
 */
 
 package com.ooadteamveritas.project3;
@@ -24,6 +25,12 @@ public class storeSimulation {
     private Store rentalStore ; //The rental store with Tools
     private SimpleToolFactory toolFactory;  //Tool factory
     
+    
+    /*
+    ============================================================================
+                                Constructor
+    ============================================================================
+    */
     //simNight = 34, numCustomerTypes = 4 because (4 * 3 = 12)
     public storeSimulation(int simNights, int numCustomerTypes){
         this.simulationNights = simNights;
@@ -61,6 +68,11 @@ public class storeSimulation {
         }        
     }
     
+    /*
+    ============================================================================
+                        The Simulation => runSimulation
+    ============================================================================
+    */
     public void runSimulation(){
         int todaysCustomerNum = 0;       //Number of customers arriving in a day
         Customer selectedCustomer;
@@ -78,12 +90,12 @@ public class storeSimulation {
                             
                 //Check if our Arraylist of selected customers in empty...
                 if(selectedDayCustomers.isEmpty()){
-                    //If empty... add the customer to out selected list
+                    //If empty... add the customer to our selected list
                     selectedDayCustomers.add(getRandomCustomer());
                 }else{
-                    //We have to check if we're not getting the same customer
+                    //We have to check if we're not getting the same customer again
                     selectedCustomer = getRandomCustomer();
-                    while(checkIfAlreadySelected(selectedCustomer,selectedDayCustomers)){
+                    while(checkIfAlreadySelectedCust(selectedCustomer,selectedDayCustomers)){
                         //Select another one if we already got that one...
                         selectedCustomer = getRandomCustomer();
                     }
@@ -96,25 +108,51 @@ public class storeSimulation {
                     
                     
                     //Check if the customer can enter the store... (observer stuff)
-                    if(canCustomerEnterStore(cust)){
+                    /*
+                        Check what kind of cust it is...
+                        Check the amount of tools they already rented
+                    */
+                    if(rentalStore.canCustomerEnterStore(cust)){
                         
                         //If yes, then we ask customer how many tools the want to rent (method in their classes)
                         //Depending on the customer, we determine how many tools to rent (randomly)
-                        int rentDuration = cust.howManyToolsToRent();
-                        int numOfTools = cust.rentDuration();
+                        int rentDuration = cust.rentDuration();
+                        int numOfTools = cust.howManyToolsToRent();
+
+                        //Account for situations where customer alreay rented some tools (max is 3...)
+                        numOfTools = numOfTools - cust.howManyToolsRented();
                         
-                        //Check if the customer already has a record
-                            //If not... then create one for them and add referecnes 
+                        //Check if the customer already has a active rental, and hence an existing record
+                        if(cust.hasActiveRental == false){                            
+                        
+                            //If not... then create one for them 
+                            Record newRecord = new Record();
+                            
+                            //Set the reference to Customer our new record
+                            newRecord.setCustomer(cust);
+                            //Set the reference to Record for our customer
+                            cust.setActiveRecord(newRecord);
+        
+                        }
+                        //Get the customer's record...
+                        Record currentCustomersRecord = cust.getCustomerRecord();
 
                         //Add the selected tools to the record
-
-                        //Update Customer's count of rented tools
+                        ArrayList<Tool> pickedTools = rentalStore.selectedNTools(numOfTools);
+                        currentCustomersRecord.addRentedTools(pickedTools);
                         
-                    }
-            
+                        //Update Customer's hasActiveRental status (bool)
+                        cust.hasActiveRental = true;
+
+                        //Determine what options the customer wants...
+                        
+                        //Calculate the cost of everything...
+                    }else{
+                        //Customer can't enter store - get another customer...
+                        continue;
+                    }          
                 }
-            }
-            
+            }        
         }  
     }
     
@@ -135,7 +173,7 @@ public class storeSimulation {
     }
     
     //Check if we selected a Customer twice (look above)
-    public boolean checkIfAlreadySelected(Customer selected, ArrayList<Customer> selectedDayCustomers){
+    public boolean checkIfAlreadySelectedCust(Customer selected, ArrayList<Customer> selectedDayCustomers){
         for(Customer cust: selectedDayCustomers){
             //== compares object references, it checks to see if the two operands point to the same object 
             if(cust == selected)
@@ -143,26 +181,4 @@ public class storeSimulation {
         }
         return false;
     } 
-    
-    //Might be overkill... Made it more "specific" just in case we need to add more stuff
-    private boolean canCustomerEnterStore(Customer cust){
-        boolean result = true;
-        if(cust.getCustType() == "business"){
-            //We have a business cusotmer...
-            if(rentalStore.howManyAvailToolsToRent() < 3){
-                result = false;
-            }
-        }else if(cust.getCustType() == "regular"){
-            //We have a regualar cusotmer...
-            if(rentalStore.checkIfAvailInventory() == false){
-                result = false;
-            }  
-        }else if(cust.getCustType() == "casual"){
-            //We have a casual cusotmer...
-            if(rentalStore.checkIfAvailInventory() == false){
-                result = false;
-            }  
-        }
-        return result;
-    }
 }
