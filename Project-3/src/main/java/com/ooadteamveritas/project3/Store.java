@@ -30,30 +30,14 @@ public class Store extends Observable {
         return this.inventory;
     }
 
-    public void startRental(Record record, Vector<Tool> tools){
-        this.currentRentalRecords.add(record);
-        tools.forEach((tool) -> this.inventory.remove(tool));
-        if(inventory.isEmpty()){
-            setValue(false);
-        }
-    }
-    /*
-    public void addtoRental(Record record, Vector<Tool> tools){
-        record.addRentedTools(tools);
-        tools.forEach((tool) -> {
-            this.inventory.remove(tool);
-            
-                });
-        if(inventory.isEmpty()){
-            setValue(false);
-        }
-    }
     public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
-        record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
+        record.getCustomer().clearRecord();
+        for(Tool tool: record.rentedTools){
+            tool.rentedOut = false;
+        }
     }
-    */
 
     public void setValue(boolean n){
         this.isInventory = n;

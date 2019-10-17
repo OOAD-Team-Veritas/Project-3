@@ -18,8 +18,8 @@ public abstract class StoreOption {
     }
     
     //Gets the total value of this option
-    public double getValue(){
-        return cost * count;
+    public double getCost(){
+        return cost;
     }
     
     public String getDescription(){

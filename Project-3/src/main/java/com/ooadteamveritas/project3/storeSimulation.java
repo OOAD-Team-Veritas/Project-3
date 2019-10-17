@@ -78,17 +78,32 @@ public class storeSimulation {
         int todaysCustomerNum = 0;       //Number of customers arriving in a day
         Customer selectedCustomer;
         ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();
+        ArrayList<Record> todaysReturns = new ArrayList<Record>();
         
         
         //Loop for the nights in the simulation...
         for(int i = 0; i < simulationNights; i++){
+            
+
+
+            ////start of day////
+            
+            //Clear yesterday's rentals
+            todaysReturns.clear();
+            //All customers return to store if needed to return tools
+            for(Customer customer : rentalCustomers){
+                Record record = customer.getCustomerRecord();
+                if (record.getNightsUntilDue() == 0){
+                    todaysReturns.add(record);
+                    rentalStore.endRental(record);
+                }
+            }
             
             //Generate Random number of customers that will arrive today
             todaysCustomerNum = genTodaysCustNum();
             
             //Pick random customers that will enter the store...
             for(int j = 0; j < todaysCustomerNum; i++){
-                            
                 //Check if our Arraylist of selected customers in empty...
                 if(selectedDayCustomers.isEmpty()){
                     //If empty... add the customer to our selected list

@@ -65,17 +65,7 @@ public abstract class Customer {
         int randomNum;
         for(int i=0; i < n; i++){
             randomNum = genRandomNum(1, 3);
-            switch(randomNum){
-                case 1:
-                    record.options.get(1).count++;
-                    break;
-                case 2:
-                    record.options.get(2).count++;
-                    break;
-                case 3:
-                    record.options.get(3).count++;
-                    break;
-            }
+            record.addStoreOption(randomNum);
         }
     }
 
