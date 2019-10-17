@@ -1,4 +1,6 @@
 package com.ooadteamveritas.project3;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.concurrent.ThreadLocalRandom;
 
 /*
@@ -10,6 +12,7 @@ public abstract class Customer {
     protected Record record;
     public boolean hasActiveRental;
     protected String custType;
+    protected boolean willShop = true;
     
     public String getName() {
         return this.name;

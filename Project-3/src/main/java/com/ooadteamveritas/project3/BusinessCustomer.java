@@ -5,11 +5,19 @@
 */
 package com.ooadteamveritas.project3;
 
-public class BusinessCustomer extends Customer {
+import java.util.Observable;
+import java.util.Observer;
+
+public class BusinessCustomer extends Customer implements Observer {
     public BusinessCustomer(String name) {
         this.name = name;
         this.hasActiveRental = false;
         this.custType = "business";
+    }
+    
+    @Override
+    public void update(Observable store, Object numTools) {
+        this.willShop = !((int)numTools < 3);
     }
     
     public int howManyToolsToRent(){

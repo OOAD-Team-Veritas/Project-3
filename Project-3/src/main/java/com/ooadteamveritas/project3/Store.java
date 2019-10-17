@@ -43,11 +43,13 @@ public class Store extends Observable {
         if(inventory.isEmpty()){
             setValue(false);
         }
+        notifyObservers(this.inventory.size());
     }
     public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
         record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
+        notifyObservers(this.inventory.size());
     }
 
     public void setValue(boolean n){
@@ -83,4 +85,5 @@ public class Store extends Observable {
         }
         return count;
     }
+    
 }
