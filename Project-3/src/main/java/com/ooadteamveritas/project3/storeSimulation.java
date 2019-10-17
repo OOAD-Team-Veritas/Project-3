@@ -15,7 +15,6 @@
 
 package com.ooadteamveritas.project3;
 import java.util.ArrayList;
-import java.util.Vector;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class storeSimulation {
@@ -83,6 +82,13 @@ public class storeSimulation {
         
         //Loop for the nights in the simulation...
         for(int i = 0; i < simulationNights; i++){
+            /********************************************************
+                Start of Day
+            /********************************************************/
+
+            //Check if a record has 0 in daysuntildue
+                //If so... then we call end rental in store
+                    
             
 
 
@@ -166,12 +172,17 @@ public class storeSimulation {
                         
                         //Calculate the cost of everything...
                         
+                        
                     }else{
                         //Customer can't enter store - get another customer...
                         continue;
                     }          
                 }
-            }        
+            }
+            //Print out all the info
+            
+            //Go through all records and decrement all daysUntilDue 
+            decrementAllRecords();
         }  
     }
     
@@ -182,13 +193,14 @@ public class storeSimulation {
     }
     
     public Customer getRandomCustomer() { 
-        int randIndex = genRandomNum(0,26);
+        //uses index
+        int randIndex = genRandomNum(0,11);
         return rentalCustomers.get(randIndex); 
     } 
     
     //Tells you how many customers will arrive in a day
     public int genTodaysCustNum(){
-        return genRandomNum(0,12);
+        return genRandomNum(1,12);
     }
 
     /*
@@ -204,5 +216,34 @@ public class storeSimulation {
                 return true;
         }
         return false;
-    } 
+    }
+    
+    private void decrementAllRecords(){
+        for(Record record : rentalStore.currentRentalRecords){
+            record.decrementNightsUntilDue();
+        }
+    }
+
+    public void printDayReport(int dayNum){
+        StringBuffer sb = new StringBuffer();
+        sb.append("================================================\n");
+        sb.append("                     Day# " + dayNum + "\n");
+        sb.append("================================================\n");
+
+        sb.append("\n");
+
+        sb.append("Number of completed rentals today: " + todaysReturns.size());
+
+        sb.append("\n");
+        
+        for(int i = 0; i < todaysReturns.size(); i++){
+            sb.append("**********");
+            sb.append(i + " - " + );
+        }
+
+        sb.append("Customer name: ");
+
+        //Prints the while stringBuffer
+        System.out.println(sb);
+    }
 }

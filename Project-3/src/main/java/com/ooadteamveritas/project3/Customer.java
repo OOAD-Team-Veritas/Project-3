@@ -64,8 +64,18 @@ public abstract class Customer {
     public void pickOptionsToRent(int n){
         int randomNum;
         for(int i=0; i < n; i++){
-            randomNum = genRandomNum(1, 3);
-            record.addStoreOption(randomNum);
+            randomNum = genRandomNum(0, 2);
+            switch(randomNum){
+                case 1:
+                    record.options.get(0).count++;
+                    break;
+                case 2:
+                    record.options.get(1).count++;
+                    break;
+                case 3:
+                    record.options.get(2).count++;
+                    break;
+            }
         }
     }
 

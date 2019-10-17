@@ -8,7 +8,7 @@ public class Store extends Observable {
     private static Store uniqueInstance;
     private boolean isInventory;
     public ArrayList<Tool> inventory;
-    private ArrayList<Record> currentRentalRecords;
+    public ArrayList<Record> currentRentalRecords;
     private ArrayList<Record> pastRentalRecords;
     
     //Constructor
