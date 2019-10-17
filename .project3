@@ -1,0 +1,215 @@
+[33mcommit 5349729d9250e1dd5141d69b1f2d5a2f5fe7c8fe[m[33m ([m[1;36mHEAD -> [m[1;32mcustomer[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/customer[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Thu Oct 17 12:41:14 2019 -0600
+
+    customer observes store to see inventory size
+
+[33mcommit 1bba6d33eaba63b34c69dc9c6311c0b4c52aa98e[m
+Merge: 66fd9f4 8d96c03
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Thu Oct 17 12:19:56 2019 -0600
+
+    fix merge conflicts
+
+[33mcommit 66fd9f4cfdfcdf676f9171863773abbfbe09595a[m
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Thu Oct 17 12:17:33 2019 -0600
+
+    merge changes
+
+[33mcommit 8d96c0384a84c6786021bd67b3d9a2570e25d305[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Thu Oct 17 11:27:52 2019 -0600
+
+    merged my stash & more work on storeSimulation
+
+[33mcommit 08f6f02466e0d7c3bf6407bc3a1537523fff3245[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Thu Oct 17 11:11:24 2019 -0600
+
+    removed .settings folder & files from remote
+
+[33mcommit aec88668820b654a3d010f8643106fd45204f2a7[m
+Author: elizrobinson <eliz.robinson8@gmail.com>
+Date:   Wed Oct 16 22:10:58 2019 -0600
+
+    Added cost functions and return handling at beginning of day
+
+[33mcommit bdf8a2e42c98753ceeddea0a90b46c8f74f94ff5[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 16 17:58:31 2019 -0600
+
+    more work on simulation class
+
+[33mcommit 9084e17f32ba9db3f34b69f2f5ba9bb050a86757[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 16 16:54:35 2019 -0600
+
+    more work on simulation class & changed location of some functions
+
+[33mcommit 97df134002b926a1861351b19f14cc00251ebd75[m
+Merge: 71780f6 b0ce34c
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Wed Oct 16 14:40:46 2019 -0600
+
+    fix merge conflicts
+
+[33mcommit 71780f6b522237ef4e001a16aa268f937ce24fa5[m
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Wed Oct 16 14:36:34 2019 -0600
+
+    customer randomness
+
+[33mcommit b0ce34ca3f096f348442b4160c44d7d83d574a9d[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 16 13:55:53 2019 -0600
+
+    removed redundant imports & updated simulation
+
+[33mcommit af9f12fe1d2513b9a58f4298882edcd4a4d72c51[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 16 13:47:02 2019 -0600
+
+    added methods in customer to return rent duration and num of tools to rent
+
+[33mcommit 54a0e400e2deaa604fe9a66e74a31cdf09e12b4f[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 15 22:25:45 2019 -0600
+
+    More progress on simulation aspect
+
+[33mcommit f3a357cbe8b8f3d70711ceb8186b943bb4e0c501[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 15 20:17:29 2019 -0600
+
+    more work on simulation
+
+[33mcommit 107c6fce4699092704bdaebadc474dc62900705c[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 15 15:35:25 2019 -0600
+
+    more work on storeSimulation
+
+[33mcommit aaf6d507e623762a9ab72469920ba618c41e846d[m
+Merge: 93b3e99 035e3c4
+Author: Joshua Khoo <joshua.khoo@colorado.edu>
+Date:   Tue Oct 15 13:11:24 2019 -0600
+
+    Merge branch 'customer'
+
+[33mcommit 035e3c42074ad07405b5c65a9b7c7681467409eb[m
+Merge: ab07abc 5571383
+Author: Joshua Khoo <joshua.khoo@colorado.edu>
+Date:   Tue Oct 15 13:09:56 2019 -0600
+
+    fix merge conflicts
+
+[33mcommit 93b3e993cb1b7e25dd4f8ca13853d190ac1e8b88[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 15 12:03:29 2019 -0600
+
+    added options classes
+
+[33mcommit ab07abc52a177c9a11ab12b0b25bd074f950d9b2[m
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Mon Oct 14 20:18:07 2019 -0600
+
+    prepare to merge into master
+
+[33mcommit 55713838a612c5fc67d172e64fb8f59182d96be5[m
+Author: elizrobinson <eliz.robinson8@gmail.com>
+Date:   Mon Oct 14 20:15:57 2019 -0600
+
+    Implementing addons
+
+[33mcommit d77954ea96932a9c079eaba2ba7da06ad13983e9[m
+Merge: 26737d3 e8295d6
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Mon Oct 14 19:13:54 2019 -0600
+
+    fix merge conflicts
+
+[33mcommit 26737d320cce050e5b8906d0ee9e3b9ab15c2081[m[33m ([m[1;32mtmp[m[33m)[m
+Author: Joshua Khoo <khoo.joshua.316@gmail.com>
+Date:   Mon Oct 14 19:12:58 2019 -0600
+
+    create customers
+
+[33mcommit e8295d63046385d16410a153bb45864d515bcd04[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Sun Oct 13 23:24:49 2019 -0600
+
+    added storeSimulation class and overloaded toString for Record.
+
+[33mcommit b991cf4d6bb4ad7edcb7b36dcf88d7062fd52d99[m
+Author: elizrobinson <eliz.robinson8@gmail.com>
+Date:   Sun Oct 13 21:52:04 2019 -0600
+
+    Removed description
+
+[33mcommit adf076f51ab1444ac0767b77d388d6006812a21b[m
+Author: elizrobinson <eliz.robinson8@gmail.com>
+Date:   Sun Oct 13 21:50:16 2019 -0600
+
+    Changes in implementation
+
+[33mcommit 4d6ee0f1253773c64b0ffbd80296971d74aa36bf[m
+Author: elizrobinson <eliz.robinson8@gmail.com>
+Date:   Sun Oct 13 20:18:54 2019 -0600
+
+    Add store and record
+
+[33mcommit 3138929e0d364059b5f6ae2cfbb82b7c6328a38a[m
+Author: Joshua Khoo <joshua.khoo@colorado.edu>
+Date:   Sun Oct 13 13:06:22 2019 -0600
+
+    create customer family
+
+[33mcommit 010e5352b297070892422e3e57ab4f96d1b42e54[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 9 13:17:22 2019 -0600
+
+    updated README
+
+[33mcommit 10e98ed2ea608fb765ed0c3f5eb1f0fe4d973068[m
+Merge: acaebaf 9a59363
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 9 13:15:03 2019 -0600
+
+    Merge branch 'master' of github.com:OOAD-Team-Veritas/Project-3
+
+[33mcommit acaebafff474db3582e826e116562ce93ad48a84[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Wed Oct 9 13:14:48 2019 -0600
+
+    Added Junit tests for SimpleToolFactory
+
+[33mcommit 9a593634c7a3e065845fc62b0f0b6a41deffe7ac[m
+Author: Riad Shash (Ray) <riadshash@yahoo.com>
+Date:   Tue Oct 8 20:40:20 2019 -0600
+
+    fixed path typo
+
+[33mcommit a0c6ddd0d93edac2634a3cf322990e68c5d5303a[m
+Author: Riad Shash (Ray) <riadshash@yahoo.com>
+Date:   Tue Oct 8 20:38:52 2019 -0600
+
+    Update README.md
+
+[33mcommit 43465f8d7a5ecfad6623da47ef298fa3af32b793[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 8 20:33:02 2019 -0600
+
+    Simple Factory for Tools
+
+[33mcommit d29cf0f1d013ad89e222c6de4be4624dab1bd257[m
+Author: Riad Shash <riadshash@yahoo.com>
+Date:   Tue Oct 8 18:40:09 2019 -0600
+
+    initial commit
+
+[33mcommit 342228f702a24bd3fd22fcdb42e51aa91a9b1cd9[m
+Author: Riad Shash (Ray) <riadshash@yahoo.com>
+Date:   Mon Oct 7 19:23:39 2019 -0600
+
+    Initial commit
