@@ -50,7 +50,7 @@ public class storeSimulationTest {
         CustomerList.add(cust1);
         
         storeSimulation instance = new storeSimulation(34,4);
-        boolean test = instance.checkIfAlreadySelected(cust2, CustomerList); 
+        boolean test = instance.checkIfAlreadySelectedCust(cust2, CustomerList); 
         System.out.println(test);
         assertFalse(test);
     }
@@ -63,7 +63,7 @@ public class storeSimulationTest {
         CustomerList.add(cust1);
         
         storeSimulation instance = new storeSimulation(34,4);
-        boolean test = instance.checkIfAlreadySelected(cust1, CustomerList); 
+        boolean test = instance.checkIfAlreadySelectedCust(cust1, CustomerList); 
         System.out.println(test);
         assertTrue(test);
     }

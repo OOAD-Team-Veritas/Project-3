@@ -5,6 +5,7 @@ public class Record{
     public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
     
     private int nightsUntilDue;
+    private int rentDuration;
     private Customer customer;       //Customer associated with this record   
     private double totalCost;
     public int recordId;            //Unique record ID
@@ -15,6 +16,7 @@ public class Record{
     //Constuctor
     public Record(){
         totalCost = 0;
+        rentDuration = 0;
         
         //Add the options
         options.add(new ExtensionCord());
@@ -71,6 +73,14 @@ public class Record{
     
     public Customer getCustomer(){
         return this.customer;
+    }
+
+    public int getRentDuration(){
+        return this.rentDuration;
+    }
+
+    public ArrayList<StoreOption> getRentedOptions(){
+        return this.options;
     }
     
     //Overriding toString() Method

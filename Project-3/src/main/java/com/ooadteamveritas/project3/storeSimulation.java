@@ -23,6 +23,7 @@ public class storeSimulation {
     private int numCustomers;               //For testing (how much of each catergory) 
     private ArrayList<Customer> rentalCustomers;    //Our Customers
     private Store rentalStore ; //The rental store with Tools
+    ArrayList<Record> todaysReturns;
     private SimpleToolFactory toolFactory;  //Tool factory
     
     
@@ -37,6 +38,7 @@ public class storeSimulation {
         this.numCustomers = numCustomers;     
         this.rentalCustomers = new ArrayList<Customer>();
         this.toolFactory = new SimpleToolFactory();
+        this.todaysReturns = new ArrayList<Record>();
         
         
         //Create an insance of store (singleton)
@@ -76,9 +78,7 @@ public class storeSimulation {
     public void runSimulation(){
         int todaysCustomerNum = 0;       //Number of customers arriving in a day
         Customer selectedCustomer;
-        ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();
-        ArrayList<Record> todaysReturns = new ArrayList<Record>();
-        
+        ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();    
         
         //Loop for the nights in the simulation...
         for(int i = 0; i < simulationNights; i++){
@@ -223,27 +223,57 @@ public class storeSimulation {
             record.decrementNightsUntilDue();
         }
     }
-
+    
     public void printDayReport(int dayNum){
         StringBuffer sb = new StringBuffer();
-        sb.append("================================================\n");
-        sb.append("                     Day# " + dayNum + "\n");
-        sb.append("================================================\n");
+        sb.append("=========================================================\n");
+        sb.append("                     Day# " + dayNum +                  "\n");
+        sb.append("=========================================================\n");
 
         sb.append("\n");
-
         sb.append("Number of completed rentals today: " + todaysReturns.size());
-
         sb.append("\n");
         
+        //Print all of today's completed rentals and details
         for(int i = 0; i < todaysReturns.size(); i++){
-            sb.append("**********");
-            sb.append(i + " - " + );
+            sb.append("****************************\n");
+            sb.append("Todays Return #" + i + "\n");
+            sb.append("****************************\n");
+            
+            //Loop through all of the records in todaysReturns
+            for(Record rec : todaysReturns){
+                sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
+                sb.append("Return duration: " + rec.getRentDuration() + "\n");
+                sb.append("Rental Total cost: " + rec.getTotalCost() + "\n");
+
+                sb.append("-------------------\n");
+                sb.append("   Rented Tools:   \n");
+                sb.append("-------------------\n");
+
+                //Loop through all the tools that were rented
+                for(Tool rentedTool : rec.getRentedTools()){
+                    sb.append(rentedTool.getName() + "\n");
+                }
+
+                sb.append("-------------------\n");
+                sb.append("  Rented Options:  \n");
+                sb.append("-------------------\n");
+
+                //Loop through all rented options
+                for(StoreOption op : rec.getRentedOptions()){
+                    //Print how many of that option and then the Description...
+                    sb.append(op.getCount() + " " + op.getDescription() + "\n");
+                }
+                sb.append("\n");
+            }
+
+            //Print all active rentals...
+            
+
         }
-
-        sb.append("Customer name: ");
-
-        //Prints the while stringBuffer
+        //Prints the whole stringBuffer
         System.out.println(sb);
     }
+
+    
 }
