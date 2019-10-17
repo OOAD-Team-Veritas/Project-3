@@ -1,5 +1,6 @@
 package com.ooadteamveritas.project3;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Observable;
 
 //Observable class implements the observable functions not seen here:
 //reference: https://www.javaworld.com/article/2077258/observer-and-observable.html
@@ -28,6 +29,10 @@ public class Store extends Observable {
 
     public ArrayList<Tool> getInventory(){
         return this.inventory;
+    }
+
+    public ArrayList<Record> getCurrentRentalRecords(){
+        return this.currentRentalRecords;
     }
 
     public void endRental(Record record){

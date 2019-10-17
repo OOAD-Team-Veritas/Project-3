@@ -265,15 +265,39 @@ public class storeSimulation {
                     sb.append(op.getCount() + " " + op.getDescription() + "\n");
                 }
                 sb.append("\n");
-            }
-
-            //Print all active rentals...
-            
+            }          
 
         }
+        sb.append("****************************\n");
+        sb.append("     Current Rentals        \n");
+        sb.append("****************************\n");
+        //Print all active rentals from the store...
+        //Loop through all the records in currentRentalRecords...
+        for(Record rec : rentalStore.getCurrentRentalRecords()){
+            sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
+            //Loop through all the tools in the record and print the name of each tool
+            for(Tool tool : rec.getRentedTools()){
+                //Intendeted to group by customer
+                sb.append("     " + tool.getName() + "\n");
+            }
+        }
+        sb.append("\n");
+        sb.append("****************************\n");
+        sb.append("    Tools In store     \n");
+        sb.append("****************************\n");
+        sb.append("Available tools in store: " + rentalStore.howManyAvailToolsToRent() + "\n");
+
+        //Loop through the inventory of tools in store and print all the tools that have rentedOut = false
+        for(Tool tool : rentalStore.getInventory()){
+            if(tool.isRented() == false){
+                //Print the name of the tool if isRented is false
+                sb.append(tool.getName());
+            }
+        }
+
+        //Print the total amount of money that the store has made today
+
         //Prints the whole stringBuffer
         System.out.println(sb);
     }
-
-    
 }
