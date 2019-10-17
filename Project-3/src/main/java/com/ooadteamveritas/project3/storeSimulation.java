@@ -300,4 +300,44 @@ public class storeSimulation {
         //Prints the whole stringBuffer
         System.out.println(sb);
     }
+
+    //This prints at the end of the simulation
+    private void printEndSimResults(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("=========================================================\n");
+        sb.append("               End of Simulation Results                 \n");
+        sb.append("=========================================================\n");
+
+        //Print total number of completed records
+        sb.append("Number of completed records: " + rentalStore.getPastRentalRecord().size() + "\n");
+
+        //Print total number of completed rentals per customer category
+        int numRegular = 0;
+        int numCasual = 0;
+        int numBusiness = 0;
+
+        //Count the # of each customer type in past records
+        numBusiness = howManyCustomerTypeRecords("business", rentalStore.getCurrentRentalRecords());
+        numRegular = howManyCustomerTypeRecords("regular", rentalStore.getCurrentRentalRecords());
+        numCasual = howManyCustomerTypeRecords("casual", rentalStore.getCurrentRentalRecords());
+
+        sb.append("Number of Casual customers that rented " + numCasual + "\n");
+        sb.append("Number of Regualar customers that rented " + numRegular + "\n");
+        sb.append("Number of Business customers that rented " + numBusiness + "\n");
+
+        //Print the total amount of money the store as made
+
+        System.out.println(sb);
+    }
+
+    //Gets the count of passed in customer type in the ArrayList
+    private int howManyCustomerTypeRecords(String type, ArrayList<Record> pastRecords){
+        int count = 0;
+        for(Record rec : pastRecords){
+            if(rec.getCustomer().getCustType() == type){
+                count++;
+            }
+        }
+        return count;
+    }
 }

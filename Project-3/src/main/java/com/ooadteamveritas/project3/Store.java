@@ -35,6 +35,10 @@ public class Store extends Observable {
         return this.currentRentalRecords;
     }
 
+    public ArrayList<Record> getPastRentalRecord(){
+        return this.pastRentalRecords;
+    }
+
     public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
