@@ -81,18 +81,18 @@ public class storeSimulation {
         Customer selectedCustomer;
         ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();    
         
-        //Loop for the nights in the simulation...
+        //Loop for the nights in the simulation... (main loop)
         for(int i = 0; i < simulationNights; i++){
-            //Clear yesterday's rentals
+            //Clear yesterday's rental loop
             todaysReturns.clear();
             
             //All customers return to store if needed to return tools
             for(Customer customer : rentalCustomers){
-                //Check if the customer has an active rental
 
+                //Check if the customer has an active rental
                 if(customer.hasActiveRental == true){
-                    System.out.println(customer.getName() + " has an active rental!");
-                    System.out.println("NightsUntilDue = " + customer.getCustomerRecord().getNightsUntilDue());
+                    //System.out.println(customer.getName() + " has an active rental!");
+                    //System.out.println("NightsUntilDue = " + customer.getCustomerRecord().getNightsUntilDue());
                     Record record = customer.getCustomerRecord();
                     if (record.getNightsUntilDue() == 0){
                         todaysReturns.add(record);
@@ -106,7 +106,8 @@ public class storeSimulation {
             
             //Generate Random number of customers that will arrive today
             todaysCustomerNum = genTodaysCustNum();
-            System.out.println("Today there are " + todaysCustomerNum  + " Customers entering the store");
+            
+            //System.out.println("Today there are " + todaysCustomerNum  + " Customers entering the store");
             
             //Pick random customers that will enter the store...
             for(int j = 0; j < todaysCustomerNum; j++){
@@ -127,10 +128,7 @@ public class storeSimulation {
                     selectedDayCustomers.add(selectedCustomer);
                 }
                 
-                //Now we already have our selected customers in selectedDayCustomers
-                //printSelectedCustomers(selectedDayCustomers);
-                
-                
+                //Now we already have our selected customers in selectedDayCustomers              
                 
                 //For every selected customer =>
                 for(Customer cust : selectedDayCustomers){
@@ -147,7 +145,8 @@ public class storeSimulation {
                         //Depending on the customer, we determine how many tools to rent (randomly)
                         int rentDuration = cust.rentDuration();
                         int numOfTools = cust.howManyToolsToRent();
-                        int numOfOptions = cust.howManyOptionsToRent();   
+                        int numOfOptions = cust.howManyOptionsToRent(); 
+
                         //System.out.println("RentDuration = " + rentDuration);
                         //System.out.println("Number of tools rented = " + numOfTools);
                         //System.out.println("Number of options rented = " + numOfOptions);
@@ -180,11 +179,9 @@ public class storeSimulation {
                         }
                         //System.out.println("Customer can only rent another " + numOfTools + " tools");
                         
-
                         //Add the selected tools to the record
                         ArrayList<Tool> pickedTools = rentalStore.selectedNTools(numOfTools);
                         currentCustomersRecord.addRentedTools(pickedTools);
-                        
                         
                         //Update Customer's hasActiveRental status (bool)
                         cust.hasActiveRental = true;
@@ -193,8 +190,7 @@ public class storeSimulation {
                         cust.pickOptionsToRent(numOfOptions);
                         
                         //Calculate the cost of everything...
-                        
-                        
+                                               
                     }else{
                         //Customer can't enter store - get another customer...
                         continue;
@@ -206,7 +202,7 @@ public class storeSimulation {
 
         }
         //At the end of the simulation we print the final report
-        //printEndSimResults();  
+        printEndSimResults();  
 
     }
     
@@ -243,7 +239,6 @@ public class storeSimulation {
     }
     
     private void decrementAllRecords(){
-        System.out.println("I am decrementing all records!");
         for(Record record : rentalStore.currentRentalRecords){
             record.decrementNightsUntilDue();
         }
@@ -251,9 +246,9 @@ public class storeSimulation {
     
     public void printDayReport(int dayNum){
         StringBuffer sb = new StringBuffer();
-        sb.append("=========================================================\n");
-        sb.append("                     Day# " + dayNum +                  "\n");
-        sb.append("=========================================================\n");
+        sb.append("======================================================================\n");
+        sb.append("                     Simulation Day# " + dayNum +                    "\n");
+        sb.append("======================================================================\n");
 
         sb.append("\n");
         sb.append("Number of completed rentals today: " + todaysReturns.size());
@@ -264,54 +259,61 @@ public class storeSimulation {
         int i = 1;
         //Loop through all of the records in todaysReturns
         for(Record rec : todaysReturns){
-            sb.append("============================\n");
-            sb.append("     Todays Return #" + i + "\n");
-            sb.append("============================\n");
+            sb.append("======================================================\n");
+            sb.append("             Todays Return #" + i + "\n");
+            sb.append("======================================================\n");
         
             sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
             sb.append("Return duration: " + rec.getRentDuration() + "\n");
             sb.append("Rental Total cost: " + rec.getTotalCost() + "\n");
 
-            sb.append("============================\n");
-            sb.append("        Rented Tools:       \n");
-            sb.append("============================\n");
+            sb.append("==========================================\n");
+            sb.append("             Rented Tools:       \n");
+            sb.append("==========================================\n");
 
             //Loop through all the tools that were rented
             for(Tool rentedTool : rec.getRentedTools()){
                 sb.append(rentedTool.getName() + "\n");
             }
 
-            sb.append("============================\n");
-            sb.append("  Rented Options:  \n");
-            sb.append("============================\n");
+            sb.append("==========================================\n");
+            sb.append("             Rented Options:  \n");
+            sb.append("==========================================\n");
 
             //Loop through all rented options in this record
             for(StoreOption op : rec.getRentedOptions()){
                 //Print how many of that option and then the Description...
-                sb.append(op.getCount() + " " + op.getDescription() + "\n");
+                if(op.getCount() > 0){
+                    sb.append(op.getCount() + " " + op.getDescription() + "\n");
+                }
             }
             sb.append("\n");
             i++;
         }          
         
-        sb.append("============================\n");
-        sb.append("     Current Rentals        \n");
-        sb.append("============================\n");
+        sb.append("==============================================\n");
+        sb.append("              Active Rentals        \n");
+        sb.append("==============================================\n");
         //Print all active rentals from the store...
         //Loop through all the records in currentRentalRecords...
-        for(Record rec : rentalStore.getCurrentRentalRecords()){
-            sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
-            //Loop through all the tools in the record and print the name of each tool
-            for(Tool tool : rec.getRentedTools()){
-                //Intendeted to group by customer
-                sb.append("     " + tool.getName() + "\n");
+        if(!rentalStore.getCurrentRentalRecords().isEmpty()){
+            for(Record rec : rentalStore.getCurrentRentalRecords()){
+                sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
+                //Loop through all the tools in the record and print the name of each tool
+                for(Tool tool : rec.getRentedTools()){
+                    //Intendeted to group by customer
+                    sb.append("     " + tool.getName() + "\n");
+                }
             }
+        }else{
+            sb.append("None \n");
         }
         
+        
         sb.append("\n");
-        sb.append("============================\n");
-        sb.append("    Tools In store          \n");
-        sb.append("============================\n");
+        sb.append("==============================================\n");
+        sb.append("             Tools In store          \n");
+        sb.append("==============================================\n");
         
         sb.append("Available tools in store: " + Integer.toString(rentalStore.howManyAvailToolsToRent()) + "\n");
         
@@ -338,12 +340,13 @@ public class storeSimulation {
     //This prints at the end of the simulation
     private void printEndSimResults(){
         StringBuffer sb = new StringBuffer();
-        sb.append("=========================================================\n");
-        sb.append("               End of Simulation Results                 \n");
-        sb.append("=========================================================\n");
+        sb.append("\n");
+        sb.append("======================================================================\n");
+        sb.append("                        End of Simulation Results                 \n");
+        sb.append("======================================================================\n");
 
         //Print total number of completed records
-        sb.append("Number of completed records: " + rentalStore.getPastRentalRecord().size() + "\n");
+        sb.append("Number of completed rentals: " + rentalStore.getPastRentalRecord().size() + "\n");
 
         //Print total number of completed rentals per customer category
         int numRegular = 0;
@@ -355,11 +358,14 @@ public class storeSimulation {
         numRegular = howManyCustomerTypeRecords("regular", rentalStore.getCurrentRentalRecords());
         numCasual = howManyCustomerTypeRecords("casual", rentalStore.getCurrentRentalRecords());
 
-        sb.append("Number of Casual customers that rented " + numCasual + "\n");
-        sb.append("Number of Regualar customers that rented " + numRegular + "\n");
-        sb.append("Number of Business customers that rented " + numBusiness + "\n");
+        sb.append("Number of Casual customers that rented: " + numCasual + "\n");
+        sb.append("Number of Regualar customers that rented: " + numRegular + "\n");
+        sb.append("Number of Business customers that rented: " + numBusiness + "\n");
+        sb.append("Total amount of money the store has made for " + simulationNights + " days:" + " $" + "\n");
 
         //Print the total amount of money the store as made
+
+        sb.append("======================================================================\n");
 
         System.out.println(sb.toString());
     }

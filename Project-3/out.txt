@@ -1,0 +1,2825 @@
+Starting the Rental Store simulation...
+======================================================================
+                     Simulation Day# 0
+======================================================================
+
+Number of completed rentals today: 0
+==============================================
+              Active Rentals        
+==============================================
+None 
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 24
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 1
+======================================================================
+
+Number of completed rentals today: 0
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 21
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 2
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #4
+Return duration: 1
+Rental Total cost: 20.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Casual Customer #1
+     Plumbing tool 2
+     Woodwork tool 2
+     Paint tool 3
+Customer name: Regular Customer #3
+     Concrete tool 3
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 11
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 3
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 48.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+==========================================
+             Rented Options:  
+==========================================
+3 Extension Cord(s)
+5 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #2
+Return duration: 1
+Rental Total cost: 20.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 5
+==========================================
+             Rented Options:  
+==========================================
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Regular Customer #3
+     Concrete tool 3
+     Paint tool 5
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Regular Customer #1
+     Concrete tool 4
+     Plumbing tool 4
+     Woodwork tool 4
+Customer name: Regular Customer #4
+     Plumbing tool 5
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Casual Customer #4
+     Yardwork tool3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 5
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 5
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 4
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 19.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 2
+Woodwork tool 2
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #3
+Return duration: 3
+Rental Total cost: 70.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 3
+Paint tool 5
+==========================================
+             Rented Options:  
+==========================================
+3 Extension Cord(s)
+3 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 33.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool3
+Yardwork tool4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Regular Customer #1
+     Concrete tool 4
+     Plumbing tool 4
+     Woodwork tool 4
+Customer name: Regular Customer #4
+     Plumbing tool 5
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Regular Customer #2
+     Paint tool 3
+     Concrete tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 6
+Plumbing tool 2
+Woodwork tool 2
+Concrete tool 3
+Paint tool 5
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 5
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #4
+Return duration: 1
+Rental Total cost: 22.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool3
+Yardwork tool4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Regular Customer #1
+     Concrete tool 4
+     Plumbing tool 4
+     Woodwork tool 4
+Customer name: Regular Customer #4
+     Plumbing tool 5
+     Plumbing tool 2
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Regular Customer #2
+     Paint tool 3
+     Concrete tool 5
+     Woodwork tool 2
+     Concrete tool 3
+Customer name: Casual Customer #1
+     Paint tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 6
+======================================================================
+
+Number of completed rentals today: 4
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 10.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+4 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #2
+Return duration: 3
+Rental Total cost: 131.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 3
+Concrete tool 5
+Woodwork tool 2
+Concrete tool 3
+==========================================
+             Rented Options:  
+==========================================
+5 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #4
+Return duration: 1
+Rental Total cost: 22.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool3
+Yardwork tool4
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+2 Accessory Kit(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Regular Customer #4
+Return duration: 4
+Rental Total cost: 66.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 5
+Plumbing tool 2
+==========================================
+             Rented Options:  
+==========================================
+5 Extension Cord(s)
+2 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Regular Customer #1
+     Concrete tool 4
+     Plumbing tool 4
+     Woodwork tool 4
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 9
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 7
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #1
+Return duration: 5
+Rental Total cost: 195.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+==========================================
+             Rented Options:  
+==========================================
+2 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Business Customer #2
+Return duration: 7
+Rental Total cost: 252.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 31.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 5
+Plumbing tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+3 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #4
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Business Customer #3
+     Plumbing tool 3
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Regular Customer #2
+     Plumbing tool 2
+     Woodwork tool 2
+     Paint tool 3
+Customer name: Casual Customer #4
+     Concrete tool 3
+     Paint tool 5
+Customer name: Regular Customer #3
+     Yardwork tool3
+     Yardwork tool4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 8
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Concrete tool 5
+Plumbing tool 5
+
+======================================================================
+                     Simulation Day# 8
+======================================================================
+
+Number of completed rentals today: 4
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 1
+Rental Total cost: 5.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Business Customer #3
+Return duration: 7
+Rental Total cost: 168.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 50.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 3
+Paint tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Business Customer #4
+Return duration: 7
+Rental Total cost: 231.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Regular Customer #2
+     Plumbing tool 2
+     Woodwork tool 2
+     Paint tool 3
+Customer name: Regular Customer #3
+     Yardwork tool3
+     Yardwork tool4
+Customer name: Casual Customer #2
+     Concrete tool 1
+Customer name: Regular Customer #1
+     Plumbing tool 1
+     Concrete tool 4
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 12
+Paint tool 1
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+
+======================================================================
+                     Simulation Day# 9
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 1
+Rental Total cost: 19.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 3
+Woodwork tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Business Customer #1
+Return duration: 7
+Rental Total cost: 210.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+==========================================
+             Rented Options:  
+==========================================
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #2
+Return duration: 2
+Rental Total cost: 40.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Regular Customer #2
+     Plumbing tool 2
+     Woodwork tool 2
+     Paint tool 3
+Customer name: Regular Customer #3
+     Yardwork tool3
+     Yardwork tool4
+Customer name: Regular Customer #1
+     Plumbing tool 1
+     Concrete tool 4
+     Plumbing tool 4
+Customer name: Casual Customer #4
+     Paint tool 1
+     Woodwork tool 1
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Regular Customer #4
+     Paint tool 4
+     Woodwork tool 4
+     Paint tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 8
+Concrete tool 1
+Plumbing tool 3
+Woodwork tool 3
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+
+======================================================================
+                     Simulation Day# 10
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #2
+Return duration: 4
+Rental Total cost: 96.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 57.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Woodwork tool 1
+Concrete tool 1
+Plumbing tool 3
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+4 Accessory Kit(s)
+5 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Regular Customer #3
+     Yardwork tool3
+     Yardwork tool4
+     Woodwork tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Regular Customer #1
+     Plumbing tool 1
+     Concrete tool 4
+     Plumbing tool 4
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Regular Customer #4
+     Paint tool 4
+     Woodwork tool 4
+     Paint tool 5
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 7
+Paint tool 1
+Concrete tool 1
+Woodwork tool 1
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Plumbing tool 3
+
+======================================================================
+                     Simulation Day# 11
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #1
+Return duration: 4
+Rental Total cost: 168.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 1
+Concrete tool 4
+Plumbing tool 4
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #3
+Return duration: 5
+Rental Total cost: 170.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool3
+Yardwork tool4
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+3 Accessory Kit(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Regular Customer #4
+     Paint tool 4
+     Woodwork tool 4
+     Paint tool 5
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Casual Customer #3
+     Plumbing tool 2
+Customer name: Casual Customer #4
+     Woodwork tool 2
+     Paint tool 3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 9
+Plumbing tool 1
+Plumbing tool 3
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 12
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #3
+Return duration: 2
+Rental Total cost: 44.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 2
+Plumbing tool 1
+Plumbing tool 3
+==========================================
+             Rented Options:  
+==========================================
+4 Extension Cord(s)
+3 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 26.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 2
+Paint tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Regular Customer #4
+     Paint tool 4
+     Woodwork tool 4
+     Paint tool 5
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #3
+     Concrete tool 4
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Plumbing tool 1
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Plumbing tool 3
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 13
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #4
+Return duration: 5
+Rental Total cost: 90.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+==========================================
+             Rented Options:  
+==========================================
+2 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #3
+     Concrete tool 4
+     Plumbing tool 4
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Paint tool 3
+Plumbing tool 3
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 14
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 1
+Rental Total cost: 13.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 4
+Woodwork tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #2
+Return duration: 1
+Rental Total cost: 5.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 3
+==========================================
+             Rented Options:  
+==========================================
+3 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 24.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 3
+Paint tool 5
+Woodwork tool 5
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+2 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Paint tool 2
+     Concrete tool 2
+     Concrete tool 3
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #3
+     Concrete tool 4
+     Plumbing tool 4
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Paint tool 3
+Plumbing tool 3
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 15
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Business Customer #2
+Return duration: 7
+Rental Total cost: 315.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 2
+Concrete tool 2
+Concrete tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+4 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Woodwork tool 3
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #3
+     Concrete tool 4
+     Plumbing tool 4
+     Paint tool 3
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Regular Customer #2
+     Plumbing tool 3
+     Paint tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Paint tool 2
+Concrete tool 2
+Concrete tool 3
+Woodwork tool 4
+Paint tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 16
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Business Customer #1
+Return duration: 7
+Rental Total cost: 273.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 3
+Concrete tool 5
+Plumbing tool 5
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 40.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 2
+Concrete tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Regular Customer #3
+Return duration: 5
+Rental Total cost: 165.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+Plumbing tool 4
+Paint tool 3
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #3
+     Paint tool 1
+     Concrete tool 1
+     Woodwork tool 1
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Regular Customer #2
+     Plumbing tool 3
+     Paint tool 4
+Customer name: Casual Customer #1
+     Paint tool 2
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Casual Customer #4
+     Yardwork tool1
+     Yardwork tool2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Concrete tool 2
+Paint tool 3
+Concrete tool 3
+Woodwork tool 3
+Concrete tool 4
+Plumbing tool 4
+Concrete tool 5
+Plumbing tool 5
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 17
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 10.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 2
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Business Customer #3
+Return duration: 7
+Rental Total cost: 231.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Concrete tool 1
+Woodwork tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 64.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool1
+Yardwork tool2
+Concrete tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Regular Customer #2
+     Plumbing tool 3
+     Paint tool 4
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Regular Customer #1
+     Concrete tool 2
+     Plumbing tool 4
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 11
+Paint tool 1
+Concrete tool 1
+Woodwork tool 1
+Paint tool 2
+Concrete tool 4
+Concrete tool 5
+Plumbing tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 18
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #2
+Return duration: 4
+Rental Total cost: 69.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 3
+Paint tool 4
+Paint tool 1
+==========================================
+             Rented Options:  
+==========================================
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 16.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 2
+Yardwork tool3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+3 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #4
+     Plumbing tool 1
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Regular Customer #1
+     Concrete tool 2
+     Plumbing tool 4
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+Customer name: Regular Customer #4
+     Concrete tool 1
+Customer name: Casual Customer #4
+     Woodwork tool 1
+     Yardwork tool1
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Casual Customer #2
+     Yardwork tool2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 6
+Paint tool 1
+Paint tool 2
+Plumbing tool 3
+Paint tool 4
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 19
+======================================================================
+
+Number of completed rentals today: 4
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #1
+Return duration: 3
+Rental Total cost: 93.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 2
+Plumbing tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+4 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #2
+Return duration: 2
+Rental Total cost: 22.0
+==========================================
+             Rented Tools:       
+==========================================
+Yardwork tool2
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 48.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Yardwork tool1
+Paint tool 1
+Paint tool 2
+==========================================
+             Rented Options:  
+==========================================
+4 Extension Cord(s)
+6 Accessory Kit(s)
+4 Protective Gear Package(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Business Customer #4
+Return duration: 7
+Rental Total cost: 210.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 1
+Plumbing tool 2
+Woodwork tool 2
+==========================================
+             Rented Options:  
+==========================================
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+Customer name: Regular Customer #4
+     Concrete tool 1
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 14
+Paint tool 1
+Plumbing tool 1
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Plumbing tool 3
+Paint tool 4
+Plumbing tool 4
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 20
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 1
+Rental Total cost: 16.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Plumbing tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+Customer name: Regular Customer #4
+     Concrete tool 1
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Regular Customer #1
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 11
+Paint tool 1
+Plumbing tool 1
+Plumbing tool 2
+Woodwork tool 2
+Plumbing tool 3
+Paint tool 4
+Plumbing tool 4
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 21
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 33.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 2
+Yardwork tool1
+Yardwork tool2
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #4
+Return duration: 4
+Rental Total cost: 80.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 1
+==========================================
+             Rented Options:  
+==========================================
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #2
+     Woodwork tool 4
+     Paint tool 5
+     Woodwork tool 5
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Regular Customer #1
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Casual Customer #1
+     Paint tool 1
+     Plumbing tool 1
+     Plumbing tool 3
+     Paint tool 4
+Customer name: Regular Customer #3
+     Woodwork tool 2
+     Yardwork tool3
+     Yardwork tool4
+Customer name: Regular Customer #2
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 4
+Concrete tool 1
+Plumbing tool 2
+Yardwork tool1
+Yardwork tool2
+
+======================================================================
+                     Simulation Day# 22
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 64.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Plumbing tool 1
+Plumbing tool 3
+Paint tool 4
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+5 Accessory Kit(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Business Customer #2
+Return duration: 7
+Rental Total cost: 147.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 4
+Paint tool 5
+Woodwork tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #3
+Return duration: 1
+Rental Total cost: 31.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 1
+Plumbing tool 2
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+1 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 3
+     Concrete tool 3
+     Woodwork tool 3
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Regular Customer #1
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Regular Customer #3
+     Woodwork tool 2
+     Yardwork tool3
+     Yardwork tool4
+Customer name: Regular Customer #2
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 11
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+Plumbing tool 2
+Plumbing tool 3
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+
+======================================================================
+                     Simulation Day# 23
+======================================================================
+
+Number of completed rentals today: 3
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Business Customer #1
+Return duration: 7
+Rental Total cost: 231.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 3
+Concrete tool 3
+Woodwork tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #2
+Return duration: 1
+Rental Total cost: 25.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Concrete tool 1
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Regular Customer #2
+Return duration: 3
+Rental Total cost: 66.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 4
+Plumbing tool 1
+Plumbing tool 2
+Plumbing tool 3
+==========================================
+             Rented Options:  
+==========================================
+5 Extension Cord(s)
+2 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #3
+     Concrete tool 4
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Regular Customer #1
+     Woodwork tool 1
+     Paint tool 2
+     Concrete tool 2
+Customer name: Regular Customer #3
+     Woodwork tool 2
+     Yardwork tool3
+     Yardwork tool4
+Customer name: Casual Customer #1
+     Paint tool 4
+     Woodwork tool 4
+Customer name: Casual Customer #3
+     Paint tool 5
+     Woodwork tool 5
+     Yardwork tool1
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 10
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+Plumbing tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Plumbing tool 4
+Yardwork tool2
+
+======================================================================
+                     Simulation Day# 24
+======================================================================
+
+Number of completed rentals today: 6
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 37.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 4
+Woodwork tool 4
+Plumbing tool 2
+==========================================
+             Rented Options:  
+==========================================
+5 Extension Cord(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #1
+Return duration: 5
+Rental Total cost: 165.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+2 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Casual Customer #2
+Return duration: 1
+Rental Total cost: 25.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 3
+Concrete tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Casual Customer #3
+Return duration: 2
+Rental Total cost: 48.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 5
+Woodwork tool 5
+Yardwork tool1
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+7 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+======================================================
+             Todays Return #5
+======================================================
+Customer name: Regular Customer #3
+Return duration: 4
+Rental Total cost: 120.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 2
+Yardwork tool3
+Yardwork tool4
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+
+======================================================
+             Todays Return #6
+======================================================
+Customer name: Business Customer #3
+Return duration: 7
+Rental Total cost: 357.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+Concrete tool 5
+Plumbing tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 21
+Woodwork tool 1
+Paint tool 2
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 25
+======================================================================
+
+Number of completed rentals today: 0
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Casual Customer #4
+     Woodwork tool 1
+     Paint tool 2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 19
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 26
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 1
+Rental Total cost: 13.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 3
+Paint tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 26.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Paint tool 2
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 15
+Woodwork tool 1
+Paint tool 2
+Woodwork tool 3
+Paint tool 4
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 27
+======================================================================
+
+Number of completed rentals today: 0
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+Customer name: Casual Customer #1
+     Woodwork tool 1
+     Paint tool 2
+Customer name: Regular Customer #4
+     Woodwork tool 3
+     Paint tool 4
+Customer name: Casual Customer #3
+     Concrete tool 4
+     Plumbing tool 4
+Customer name: Regular Customer #1
+     Woodwork tool 4
+     Paint tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 7
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 28
+======================================================================
+
+Number of completed rentals today: 2
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 26.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Paint tool 2
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #3
+Return duration: 2
+Rental Total cost: 62.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+Plumbing tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+Customer name: Regular Customer #4
+     Woodwork tool 3
+     Paint tool 4
+     Yardwork tool4
+Customer name: Regular Customer #1
+     Woodwork tool 4
+     Paint tool 5
+Customer name: Regular Customer #2
+     Concrete tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Casual Customer #2
+     Plumbing tool 5
+     Woodwork tool 5
+     Yardwork tool3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 4
+Woodwork tool 1
+Paint tool 2
+Concrete tool 4
+Plumbing tool 4
+
+======================================================================
+                     Simulation Day# 29
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #2
+Return duration: 2
+Rental Total cost: 60.0
+==========================================
+             Rented Tools:       
+==========================================
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool3
+==========================================
+             Rented Options:  
+==========================================
+7 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #1
+     Paint tool 1
+     Concrete tool 1
+     Plumbing tool 1
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+Customer name: Regular Customer #4
+     Woodwork tool 3
+     Paint tool 4
+     Yardwork tool4
+Customer name: Regular Customer #1
+     Woodwork tool 4
+     Paint tool 5
+Customer name: Regular Customer #2
+     Concrete tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Casual Customer #1
+     Woodwork tool 1
+     Paint tool 2
+Customer name: Casual Customer #4
+     Concrete tool 4
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 3
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool3
+
+======================================================================
+                     Simulation Day# 30
+======================================================================
+
+Number of completed rentals today: 4
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 26.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 1
+Paint tool 2
+==========================================
+             Rented Options:  
+==========================================
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Regular Customer #1
+Return duration: 4
+Rental Total cost: 82.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 4
+Paint tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool3
+==========================================
+             Rented Options:  
+==========================================
+3 Extension Cord(s)
+4 Accessory Kit(s)
+4 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Business Customer #1
+Return duration: 7
+Rental Total cost: 252.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+==========================================
+             Rented Options:  
+==========================================
+2 Extension Cord(s)
+2 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Casual Customer #4
+Return duration: 2
+Rental Total cost: 62.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 4
+Plumbing tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+Customer name: Regular Customer #4
+     Woodwork tool 3
+     Paint tool 4
+     Yardwork tool4
+Customer name: Regular Customer #2
+     Concrete tool 5
+     Yardwork tool1
+     Yardwork tool2
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 12
+Paint tool 1
+Concrete tool 1
+Plumbing tool 1
+Woodwork tool 1
+Paint tool 2
+Concrete tool 4
+Plumbing tool 4
+Woodwork tool 4
+Paint tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool3
+
+======================================================================
+                     Simulation Day# 31
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #4
+Return duration: 5
+Rental Total cost: 109.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 3
+Paint tool 4
+Yardwork tool4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #4
+     Concrete tool 2
+     Plumbing tool 2
+     Woodwork tool 2
+Customer name: Business Customer #2
+     Paint tool 3
+     Concrete tool 3
+     Plumbing tool 3
+Customer name: Regular Customer #2
+     Concrete tool 5
+     Yardwork tool1
+     Yardwork tool2
+Customer name: Casual Customer #2
+     Paint tool 1
+     Plumbing tool 5
+     Woodwork tool 5
+Customer name: Business Customer #3
+     Concrete tool 1
+     Plumbing tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #1
+     Paint tool 2
+     Concrete tool 4
+Customer name: Regular Customer #3
+     Plumbing tool 4
+Customer name: Casual Customer #1
+     Woodwork tool 4
+     Paint tool 5
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 4
+Woodwork tool 3
+Paint tool 4
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 32
+======================================================================
+
+Number of completed rentals today: 6
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Casual Customer #1
+Return duration: 2
+Rental Total cost: 26.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 4
+Paint tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+2 Accessory Kit(s)
+2 Protective Gear Package(s)
+
+======================================================
+             Todays Return #2
+======================================================
+Customer name: Casual Customer #2
+Return duration: 2
+Rental Total cost: 48.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 1
+Plumbing tool 5
+Woodwork tool 5
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+4 Accessory Kit(s)
+5 Protective Gear Package(s)
+
+======================================================
+             Todays Return #3
+======================================================
+Customer name: Regular Customer #2
+Return duration: 5
+Rental Total cost: 210.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 5
+Yardwork tool1
+Yardwork tool2
+==========================================
+             Rented Options:  
+==========================================
+4 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+======================================================
+             Todays Return #4
+======================================================
+Customer name: Business Customer #2
+Return duration: 7
+Rental Total cost: 252.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+==========================================
+             Rented Options:  
+==========================================
+2 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+======================================================
+             Todays Return #5
+======================================================
+Customer name: Casual Customer #4
+Return duration: 1
+Rental Total cost: 8.0
+==========================================
+             Rented Tools:       
+==========================================
+Woodwork tool 3
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+3 Protective Gear Package(s)
+
+======================================================
+             Todays Return #6
+======================================================
+Customer name: Business Customer #4
+Return duration: 7
+Rental Total cost: 273.0
+==========================================
+             Rented Tools:       
+==========================================
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+==========================================
+             Rented Options:  
+==========================================
+1 Accessory Kit(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #3
+     Concrete tool 1
+     Plumbing tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #1
+     Paint tool 2
+     Concrete tool 4
+Customer name: Regular Customer #3
+     Plumbing tool 4
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 18
+Paint tool 1
+Concrete tool 2
+Plumbing tool 2
+Woodwork tool 2
+Paint tool 3
+Concrete tool 3
+Plumbing tool 3
+Woodwork tool 3
+Paint tool 4
+Woodwork tool 4
+Paint tool 5
+Concrete tool 5
+Plumbing tool 5
+Woodwork tool 5
+Yardwork tool1
+Yardwork tool2
+Yardwork tool3
+Yardwork tool4
+
+======================================================================
+                     Simulation Day# 33
+======================================================================
+
+Number of completed rentals today: 1
+======================================================
+             Todays Return #1
+======================================================
+Customer name: Regular Customer #1
+Return duration: 3
+Rental Total cost: 75.0
+==========================================
+             Rented Tools:       
+==========================================
+Paint tool 2
+Concrete tool 4
+==========================================
+             Rented Options:  
+==========================================
+1 Extension Cord(s)
+1 Accessory Kit(s)
+1 Protective Gear Package(s)
+
+==============================================
+              Active Rentals        
+==============================================
+Customer name: Business Customer #3
+     Concrete tool 1
+     Plumbing tool 1
+     Woodwork tool 1
+Customer name: Regular Customer #3
+     Plumbing tool 4
+Customer name: Business Customer #2
+     Paint tool 1
+     Concrete tool 2
+     Plumbing tool 2
+Customer name: Business Customer #4
+     Woodwork tool 2
+     Paint tool 3
+     Concrete tool 3
+Customer name: Casual Customer #4
+     Plumbing tool 3
+     Woodwork tool 3
+     Woodwork tool 5
+     Yardwork tool1
+Customer name: Casual Customer #2
+     Paint tool 4
+     Woodwork tool 4
+Customer name: Business Customer #1
+     Paint tool 5
+     Concrete tool 5
+     Plumbing tool 5
+Customer name: Regular Customer #4
+     Yardwork tool2
+     Yardwork tool3
+
+==============================================
+             Tools In store          
+==============================================
+Available tools in store: 3
+Paint tool 2
+Concrete tool 4
+Yardwork tool4
+
+
+======================================================================
+                        End of Simulation Results                 
+======================================================================
+Number of completed rentals: 76
+Number of Casual customers that rented: 3
+Number of Regualar customers that rented: 3
+Number of Business customers that rented: 4
+Total amount of money the store has made for 34 days: $
+======================================================================
+
+End of Simulation!
