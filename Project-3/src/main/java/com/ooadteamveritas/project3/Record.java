@@ -1,30 +1,30 @@
 package com.ooadteamveritas.project3;
 import java.util.ArrayList;
-import java.util.Vector;
 
 public class Record{
-    public Vector<Tool> rentedTools = new Vector<Tool>();
+    public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
     
     private int nightsUntilDue;
+    private int rentDuration;
     private Customer customer;       //Customer associated with this record   
     private double totalCost;
     public int recordId;            //Unique record ID
     
     //The options live here (only one instace)
-    private ArrayList<StoreOption> options = new ArrayList<StoreOption>();
+    public ArrayList<StoreOption> options = new ArrayList<StoreOption>();
     
     //Constuctor
-    public Record(int num){
+    public Record(){
         totalCost = 0;
-        recordId = num;
+        rentDuration = 0;
         
         //Add the options
         options.add(new ExtensionCord());
         options.add(new AccessoryKit());
         options.add(new ProtectiveGearPackage());
     }
-    
-    public Vector<Tool> getRentedTools(){
+    //replace record.options.get(
+    public ArrayList<Tool> getRentedTools(){
         return this.rentedTools;
     }
     
@@ -36,6 +36,10 @@ public class Record{
         StoreOption option = this.options.get(whichOption);
         option.count++;
         updateTotalCost(null, option);
+    }
+
+    public void setCustomer(Customer cust){
+        this.customer = cust;
     }
     
     public void updateTotalCost(ArrayList<Tool> tools, StoreOption option){
@@ -70,6 +74,14 @@ public class Record{
     public Customer getCustomer(){
         return this.customer;
     }
+
+    public int getRentDuration(){
+        return this.rentDuration;
+    }
+
+    public ArrayList<StoreOption> getRentedOptions(){
+        return this.options;
+    }
     
     //Overriding toString() Method
     public String toString() {
@@ -79,3 +91,4 @@ public class Record{
        return sb.toString();
     }
 }
+

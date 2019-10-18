@@ -8,7 +8,7 @@ package com.ooadteamveritas.project3;
 import java.util.Observable;
 import java.util.Observer;
 
-public class BusinessCustomer extends Customer implements Observer {
+public class BusinessCustomer extends Customer {
     public BusinessCustomer(String name) {
         this.name = name;
         this.hasActiveRental = false;
