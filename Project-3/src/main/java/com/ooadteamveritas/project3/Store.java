@@ -56,6 +56,10 @@ public class Store extends Observable {
     public boolean getValue(){
         return this.isInventory;
     }
+
+    public void addRentalRecord(Record rec){
+        currentRentalRecords.add(rec);
+    }
     
     //Adds a tool to the inventory (used by simulation)
     public void addTool(Tool newTool){
@@ -65,7 +69,7 @@ public class Store extends Observable {
     //Checks if there is available inventoy to rent (at least one)
     public boolean checkIfAvailInventory(){
         boolean avail = false;
-        for(Tool tool : inventory){
+        for(Tool tool : this.inventory){
             if(tool.isRented() == false)
                 avail = true;
         }
@@ -76,8 +80,9 @@ public class Store extends Observable {
     public int howManyAvailToolsToRent(){
         int count = 0;
         for(Tool tool : inventory){
-            if(tool.isRented() == false)
+            if(tool.isRented() == false){
                 count++;
+            }
         }
         return count;
     }
@@ -99,6 +104,7 @@ public class Store extends Observable {
                 if(count < n){
                     count++;
                     selectedTools.add(tool);
+                    tool.rent();
                 }     
             }
         }

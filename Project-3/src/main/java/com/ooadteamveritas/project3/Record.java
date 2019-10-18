@@ -17,6 +17,7 @@ public class Record{
     public Record(){
         totalCost = 0;
         rentDuration = 0;
+        nightsUntilDue = 0;
         
         //Add the options
         options.add(new ExtensionCord());
@@ -68,7 +69,7 @@ public class Record{
     }
     
     public void decrementNightsUntilDue(){
-        this.nightsUntilDue = this.nightsUntilDue-1;
+        this.nightsUntilDue--;
     }
     
     public Customer getCustomer(){

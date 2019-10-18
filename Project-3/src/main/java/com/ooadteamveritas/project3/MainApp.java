@@ -6,7 +6,7 @@ public class MainApp {
         System.out.println("This is the main function!");
         //simNight = 34, numCustomerTypes = 4 because (4 * 3 = 12)
         storeSimulation sim = new storeSimulation(34,4);
-        //sim.runSimulation();
+        sim.runSimulation();
         System.out.println("End of Simulation!");
     }
 }
