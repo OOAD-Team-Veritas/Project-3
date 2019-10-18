@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class Record{
     public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
     
-    private int nightsUntilDue;
-    private int rentDuration;
+    private int nightsUntilDue;         //This decrements at the end of each rental day
+    private int rentDuration;       //This does not change
     private Customer customer;       //Customer associated with this record   
     private double totalCost;
     public int recordId;            //Unique record ID
@@ -64,8 +64,10 @@ public class Record{
         return this.nightsUntilDue;
     }
     
+    //Sets the nightsUntilDue counter and the rentDuration var
     public void setNightsUntilDue(int nights){
         this.nightsUntilDue = nights;
+        this.rentDuration = nights;
     }
     
     public void decrementNightsUntilDue(){

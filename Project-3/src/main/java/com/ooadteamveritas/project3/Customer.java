@@ -32,6 +32,7 @@ public abstract class Customer {
     //When Customer is done with a rental transaction
     public void clearRecord(){
         this.record = null;
+        hasActiveRental = false;
     }
     
     //Returns how many tools customer is renting right now  (from their record)
