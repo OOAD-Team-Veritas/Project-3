@@ -49,6 +49,11 @@ public class storeSimulation {
             rentalCustomers.add(new BusinessCustomer("Business Customer #" + i));
         }
         numCustomers = numCustomerTypes * 3;
+
+        //Register all customers as observers
+        for(Customer customer : rentalCustomers){
+            rentalStore.addObserver(customer);
+        }
         
         //make tools and put them into the store (24 total)
         for(int i=0;i<5;i++){

@@ -1,5 +1,6 @@
 package com.ooadteamveritas.project3;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Vector;
 
 public class Record{
     public Vector<Tool> rentedTools = new Vector<Tool>();
@@ -27,11 +28,26 @@ public class Record{
         return this.rentedTools;
     }
     
-    public void addRentedTools(Vector<Tool> tools){
+    public void addRentedTools(ArrayList<Tool> tools){
         this.rentedTools.addAll(tools);
+        updateTotalCost(tools, null);
+    }
+    public void addStoreOption(int whichOption){
+        StoreOption option = this.options.get(whichOption);
+        option.count++;
+        updateTotalCost(null, option);
     }
     
-    public void updateTotalCost(double total){
+    public void updateTotalCost(ArrayList<Tool> tools, StoreOption option){
+        float total = 0;
+        if(tools != null){
+            for(Tool tool : tools){
+                total += tool.price * this.getNightsUntilDue();
+            }
+        }
+        if(option != null){
+            total += option.getCost();
+        }
         this.totalCost = this.totalCost + total;
     }
     
