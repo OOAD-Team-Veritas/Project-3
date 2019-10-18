@@ -1,14 +1,20 @@
 package com.ooadteamveritas.project3;
 import java.util.ArrayList;
 
+<<<<<<< Updated upstream
 public class Record{
     public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
     
+=======
+public class Record{    
+>>>>>>> Stashed changes
     private int nightsUntilDue;
     private int rentDuration;
     private Customer customer;       //Customer associated with this record   
     private double totalCost;
     public int recordId;            //Unique record ID
+    public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
+
     
     //The options live here (only one instace)
     public ArrayList<StoreOption> options = new ArrayList<StoreOption>();
@@ -23,7 +29,11 @@ public class Record{
         options.add(new AccessoryKit());
         options.add(new ProtectiveGearPackage());
     }
+<<<<<<< Updated upstream
     //replace record.options.get(
+=======
+    
+>>>>>>> Stashed changes
     public ArrayList<Tool> getRentedTools(){
         return this.rentedTools;
     }
