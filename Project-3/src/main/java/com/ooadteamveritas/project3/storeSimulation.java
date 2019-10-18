@@ -104,6 +104,9 @@ public class storeSimulation {
                     rentalStore.endRental(record);
                 }
             }
+
+            //Print the report at the start of the day... (passing in the Day#)
+            printDayReport(i);
             
             //Generate Random number of customers that will arrive today
             todaysCustomerNum = genTodaysCustNum();
@@ -183,7 +186,9 @@ public class storeSimulation {
             
             //Go through all records and decrement all daysUntilDue 
             decrementAllRecords();
-        }  
+        }
+        //At the end of the simulation we print the final report
+        printEndSimResults();  
     }
     
     //min -> inclusive
@@ -300,8 +305,14 @@ public class storeSimulation {
         //Prints the whole stringBuffer
         System.out.println(sb);
     }
-
-    //This prints at the end of the simulation
+/*
+    ============================================================================
+                        printEndSimResults()
+        1. Print the total # of completed rentals
+        2. Print # of rental by customer types
+        3. Print total $ that the store has made for 35 day period
+    ============================================================================
+    *///This prints at the end of the simulation
     private void printEndSimResults(){
         StringBuffer sb = new StringBuffer();
         sb.append("=========================================================\n");
