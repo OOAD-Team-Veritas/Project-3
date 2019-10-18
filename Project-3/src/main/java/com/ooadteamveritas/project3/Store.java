@@ -1,5 +1,6 @@
 package com.ooadteamveritas.project3;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Observable;
 
 //Observable class implements the observable functions not seen here:
 //reference: https://www.javaworld.com/article/2077258/observer-and-observable.html
@@ -27,29 +28,31 @@ public class Store extends Observable {
     public ArrayList<Tool> getInventory(){
         return this.inventory;
     }
-    public void startRental(Record record, Vector<Tool> tools){
-        this.currentRentalRecords.add(record);
-        tools.forEach((tool) -> this.inventory.remove(tool));
-        if(inventory.isEmpty()){
-            setValue(false);
-        }
-    }
-    public void addtoRental(Record record, Vector<Tool> tools){
-        record.addRentedTools(tools);
-        tools.forEach((tool) -> {
-            this.inventory.remove(tool);
+    // public void startRental(Record record, Vector<Tool> tools){
+    //     this.currentRentalRecords.add(record);
+    //     tools.forEach((tool) -> this.inventory.remove(tool));
+    //     if(inventory.isEmpty()){
+    //         setValue(false);
+    //     }
+    // }
+    // public void addtoRental(Record record, Vector<Tool> tools){
+    //     record.addRentedTools(tools);
+    //     tools.forEach((tool) -> {
+    //         this.inventory.remove(tool);
             
-                });
-        if(inventory.isEmpty()){
-            setValue(false);
-        }
-        notifyObservers(this.inventory.size());
-    }
+    //             });
+    //     if(inventory.isEmpty()){
+    //         setValue(false);
+    //     }
+    //     notifyObservers(this.inventory.size());
+    // }
     public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
-        record.getRentedTools().forEach((tool) -> this.inventory.add(tool));
-        notifyObservers(this.inventory.size());
+        record.getCustomer().clearRecord();
+        for(Tool tool: record.rentedTools){
+            tool.rentedOut = false;
+        }
     }
 
     public void setValue(boolean n){

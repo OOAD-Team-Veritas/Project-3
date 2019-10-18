@@ -1,5 +1,4 @@
 package com.ooadteamveritas.project3;
-import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
     The count of tools is determined by looking at the record...
 */
 
-public abstract class Customer {
+public abstract class Customer implements Observer{
     protected String name;
     protected Record record;
     public boolean hasActiveRental;
@@ -68,17 +67,7 @@ public abstract class Customer {
         int randomNum;
         for(int i=0; i < n; i++){
             randomNum = genRandomNum(0, 2);
-            switch(randomNum){
-                case 1:
-                    record.options.get(0).count++;
-                    break;
-                case 2:
-                    record.options.get(1).count++;
-                    break;
-                case 3:
-                    record.options.get(2).count++;
-                    break;
-            }
+            record.addStoreOption(randomNum);
         }
     }
 
