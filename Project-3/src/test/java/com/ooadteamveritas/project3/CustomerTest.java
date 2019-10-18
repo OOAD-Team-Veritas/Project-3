@@ -29,8 +29,8 @@ public class CustomerTest {
     }
     
     @Test
-    public void testPickRent() {
-        System.out.println("Testing random option picking");
+    public void testHowManyOptions() {
+        System.out.println("Testing random # of options picking");
         Customer test = new CasualCustomer("Test");
         int numOptions = test.howManyOptionsToRent();
         
