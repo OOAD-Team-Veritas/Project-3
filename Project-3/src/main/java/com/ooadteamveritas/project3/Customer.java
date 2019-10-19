@@ -1,5 +1,4 @@
 package com.ooadteamveritas.project3;
-import java.security.SecureRandom;
 import java.util.concurrent.ThreadLocalRandom;
 
 /*
@@ -69,13 +68,13 @@ public abstract class Customer {
             randomNum = genRandomNum(0, 2);
             switch(randomNum){
                 case 0:
-                    record.options.get(0).count++;
+                    record.addStoreOption(0);
                     break;
                 case 1:
-                    record.options.get(1).count++;
+                    record.addStoreOption(1);
                     break;
                 case 2:
-                    record.options.get(2).count++;
+                    record.addStoreOption(2);
                     break;
             }
         }

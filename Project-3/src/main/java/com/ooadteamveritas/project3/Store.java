@@ -1,4 +1,5 @@
 package com.ooadteamveritas.project3;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -11,12 +12,15 @@ public class Store extends Observable {
     public ArrayList<Tool> inventory;
     public ArrayList<Record> currentRentalRecords;
     private ArrayList<Record> pastRentalRecords;
+    private double dayRevenue;          //Revenue generated each day
+    private double totalRevenue;        //Total revenue
     
     //Constructor
     private Store(){
         inventory = new ArrayList<Tool>();
         currentRentalRecords = new ArrayList<Record>();
         pastRentalRecords = new ArrayList<Record>();
+        dayRevenue = 0.0;
     }
     
     //Singleton => getInstance
@@ -109,6 +113,33 @@ public class Store extends Observable {
             }
         }
         return selectedTools;
+    }
+
+    //Returns amount formatted as currency as a string
+    private String formatAsCurrency(double amount){
+        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+		String result = defaultFormat.format(amount);
+        return result;
+    }
+
+    public String getFinalDayRevenue(){
+        return formatAsCurrency(dayRevenue);
+    }
+
+    public String getFinalTotalRevenue(){
+        return formatAsCurrency(totalRevenue);
+    }
+
+    public void clearDayRevenue(){
+        dayRevenue = 0.0;
+    }
+
+    public void updateDayRevenue(double newAmount){
+        dayRevenue += newAmount;
+    }
+
+    public void updateTotalRevenue(){
+        totalRevenue += dayRevenue;
     }
 
     /*

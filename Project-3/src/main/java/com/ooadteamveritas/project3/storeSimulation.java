@@ -66,7 +66,7 @@ public class storeSimulation {
         }
         //Add 4 more
         for(int i=1;i<=4;i++){
-            Tool newTool = toolFactory.createTool("yardwork", "Yardwork tool" + Integer.toString(i));
+            Tool newTool = toolFactory.createTool("yardwork", "Yardwork tool " + Integer.toString(i));
             rentalStore.addTool(newTool);
         }        
     }
@@ -83,6 +83,9 @@ public class storeSimulation {
         
         //Loop for the nights in the simulation... (main loop)
         for(int i = 0; i < simulationNights; i++){
+            //Clear today's revenue
+            rentalStore.clearDayRevenue();
+
             //Clear yesterday's rental loop
             todaysReturns.clear();
             
@@ -178,18 +181,19 @@ public class storeSimulation {
                             numOfTools = 0;
                         }
                         //System.out.println("Customer can only rent another " + numOfTools + " tools");
+                        //Determine what options the customer wants...
+                        cust.pickOptionsToRent(numOfOptions);
                         
                         //Add the selected tools to the record
                         ArrayList<Tool> pickedTools = rentalStore.selectedNTools(numOfTools);
                         currentCustomersRecord.addRentedTools(pickedTools);
+
+                        rentalStore.updateDayRevenue(currentCustomersRecord.getTotalCost());
+                        rentalStore.updateTotalRevenue();
                         
                         //Update Customer's hasActiveRental status (bool)
                         cust.hasActiveRental = true;
-
-                        //Determine what options the customer wants...
-                        cust.pickOptionsToRent(numOfOptions);
-                        
-                        //Calculate the cost of everything...
+                      
                                                
                     }else{
                         //Customer can't enter store - get another customer...
@@ -199,6 +203,9 @@ public class storeSimulation {
             }
             //Go through all records and decrement all daysUntilDue 
             decrementAllRecords();
+
+            //Print today's total revenue 
+            System.out.println("Total revenue for today: " + rentalStore.getFinalDayRevenue());
 
         }
         //At the end of the simulation we print the final report
@@ -247,7 +254,7 @@ public class storeSimulation {
     public void printDayReport(int dayNum){
         StringBuffer sb = new StringBuffer();
         sb.append("======================================================================\n");
-        sb.append("                     Simulation Day# " + dayNum +                    "\n");
+        sb.append("                     Simulation Day# " + (dayNum+1) +                    "\n");
         sb.append("======================================================================\n");
 
         sb.append("\n");
@@ -265,7 +272,7 @@ public class storeSimulation {
         
             sb.append("Customer name: " + rec.getCustomer().getName() + "\n");
             sb.append("Return duration: " + rec.getRentDuration() + "\n");
-            sb.append("Rental Total cost: " + rec.getTotalCost() + "\n");
+            sb.append("Rental Total cost: " + rec.getTotalCostFormatCurr() + "\n");
 
             sb.append("==========================================\n");
             sb.append("             Rented Tools:       \n");
@@ -308,8 +315,7 @@ public class storeSimulation {
         }else{
             sb.append("None \n");
         }
-        
-        
+             
         sb.append("\n");
         sb.append("==============================================\n");
         sb.append("             Tools In store          \n");
@@ -359,9 +365,9 @@ public class storeSimulation {
         numCasual = howManyCustomerTypeRecords("casual", rentalStore.getCurrentRentalRecords());
 
         sb.append("Number of Casual customers that rented: " + numCasual + "\n");
-        sb.append("Number of Regualar customers that rented: " + numRegular + "\n");
+        sb.append("Number of Regular customers that rented: " + numRegular + "\n");
         sb.append("Number of Business customers that rented: " + numBusiness + "\n");
-        sb.append("Total amount of money the store has made for " + simulationNights + " days:" + " $" + "\n");
+        sb.append("Total amount of money the store has made for " + (simulationNights+1) + " days: " + rentalStore.getFinalTotalRevenue() + "\n");
 
         //Print the total amount of money the store as made
 
