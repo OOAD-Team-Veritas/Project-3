@@ -187,7 +187,11 @@ public class storeSimulation {
 
                         //Account for situations where customer alreay rented some tools (max is 3...)
                         if(cust.howManyToolsRented() < cust.getMaxTools()){
-                            howManyMoreTools(cust.howManyToolsRented());
+                            numOfTools = howManyMoreTools(cust.howManyToolsRented(), cust);
+                            //Business customer won't get here unless they have 0 tools
+                            if(cust.getCustType() == "business"){
+                                numOfTools = 3;
+                            }
                         }else{
                             numOfTools = 0;
                         }
@@ -404,9 +408,9 @@ public class storeSimulation {
         }
     }
 
-    private int howManyMoreTools(int currentNumOfTools){
+    private int howManyMoreTools(int currentNumOfTools, Customer cust){
         int rand = 0;
-        int max = 3 - currentNumOfTools;
+        int max = cust.getMaxTools() - currentNumOfTools;
         rand = genRandomNum(1,max);
         return rand;
     }
