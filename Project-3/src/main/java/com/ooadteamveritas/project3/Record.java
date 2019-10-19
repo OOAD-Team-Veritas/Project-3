@@ -1,4 +1,5 @@
 package com.ooadteamveritas.project3;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class Record{
@@ -51,21 +52,32 @@ public class Record{
         return this.customer;
     }
     
+    //Returns amount formatted as currency as a string
+    private String formatAsCurrency(double amount){
+        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+		String result = defaultFormat.format(amount);
+        return result;
+    }
+    
     public void updateTotalCost(ArrayList<Tool> tools, StoreOption option){
-        float total = 0;
+        double total = 0;
         if(tools != null){
             for(Tool tool : tools){
                 total += tool.price * this.getNightsUntilDue();
             }
         }
         if(option != null){
-            total += option.getCost();
+            total += option.getCost(); 
         }
-        this.totalCost = this.totalCost + total;
+        this.totalCost += total;
     }
     
     public double getTotalCost(){
         return this.totalCost;
+    }
+
+    public String getTotalCostFormatCurr(){
+        return formatAsCurrency(totalCost);
     }
     
     //Sets the nightsUntilDue counter and the rentDuration var
