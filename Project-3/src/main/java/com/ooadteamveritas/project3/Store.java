@@ -104,6 +104,7 @@ public class Store extends Observable {
         for(Tool tool: record.getRentedTools()){
             tool.rentedOut = false;
         }
+        this.setIsInventory(true);
     }
 
     /*
