@@ -5,18 +5,11 @@
 
 package com.ooadteamveritas.project3;
 
-import java.util.Observable;
-
 public class CasualCustomer extends Customer {
     public CasualCustomer(String name) {
         this.name = name;
         this.hasActiveRental = false;
         this.custType = "casual";
-    }
-    
-    @Override
-    public void update(Observable store, Object numTools) {
-        this.willShop = !((int)numTools < 1);
     }
 
     public int howManyToolsToRent(){

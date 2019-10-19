@@ -1,23 +1,16 @@
 package com.ooadteamveritas.project3;
 import java.util.ArrayList;
 
-<<<<<<< Updated upstream
 public class Record{
-    public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
-    
-=======
-public class Record{    
->>>>>>> Stashed changes
     private int nightsUntilDue;
     private int rentDuration;
     private Customer customer;       //Customer associated with this record   
     private double totalCost;
-    public int recordId;            //Unique record ID
-    public ArrayList<Tool> rentedTools = new ArrayList<Tool>();
+    private int recordId;            //Unique record ID
+    private ArrayList<Tool> rentedTools = new ArrayList<Tool>();
 
-    
-    //The options live here (only one instace)
-    public ArrayList<StoreOption> options = new ArrayList<StoreOption>();
+    //The options live here (only one instance each with a count for quantity)
+    private ArrayList<StoreOption> options = new ArrayList<StoreOption>();
     
     //Constuctor
     public Record(){
@@ -29,27 +22,32 @@ public class Record{
         options.add(new AccessoryKit());
         options.add(new ProtectiveGearPackage());
     }
-<<<<<<< Updated upstream
-    //replace record.options.get(
-=======
-    
->>>>>>> Stashed changes
-    public ArrayList<Tool> getRentedTools(){
-        return this.rentedTools;
-    }
     
     public void addRentedTools(ArrayList<Tool> tools){
         this.rentedTools.addAll(tools);
         updateTotalCost(tools, null);
     }
+
+    public ArrayList<Tool> getRentedTools(){
+        return this.rentedTools;
+    }
+
     public void addStoreOption(int whichOption){
         StoreOption option = this.options.get(whichOption);
         option.count++;
         updateTotalCost(null, option);
     }
 
+    public ArrayList<StoreOption> getRentedOptions(){
+        return this.options;
+    }
+
     public void setCustomer(Customer cust){
         this.customer = cust;
+    }
+
+    public Customer getCustomer(){
+        return this.customer;
     }
     
     public void updateTotalCost(ArrayList<Tool> tools, StoreOption option){
@@ -69,28 +67,20 @@ public class Record{
         return this.totalCost;
     }
     
-    public int getNightsUntilDue(){
-        return this.nightsUntilDue;
-    }
-    
     public void setNightsUntilDue(int nights){
         this.nightsUntilDue = nights;
     }
-    
+
     public void decrementNightsUntilDue(){
         this.nightsUntilDue = this.nightsUntilDue-1;
     }
-    
-    public Customer getCustomer(){
-        return this.customer;
+
+    public int getNightsUntilDue(){
+        return this.nightsUntilDue;
     }
 
     public int getRentDuration(){
         return this.rentDuration;
-    }
-
-    public ArrayList<StoreOption> getRentedOptions(){
-        return this.options;
     }
     
     //Overriding toString() Method

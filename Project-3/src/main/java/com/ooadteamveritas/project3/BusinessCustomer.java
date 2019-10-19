@@ -6,7 +6,6 @@
 package com.ooadteamveritas.project3;
 
 import java.util.Observable;
-import java.util.Observer;
 
 public class BusinessCustomer extends Customer {
     public BusinessCustomer(String name) {
@@ -14,15 +13,22 @@ public class BusinessCustomer extends Customer {
         this.hasActiveRental = false;
         this.custType = "business";
     }
-    
+
     @Override
-    public void update(Observable store, Object numTools) {
-        this.willShop = !((int)numTools < 3);
+    public void update(Observable observable, Object arg) {
+        if(observable instanceof Store){
+            Store store = (Store)observable;
+            if(store.howManyAvailToolsToRent() < 3){
+                this.knowsToolsLeft = false;
+            }else{
+                this.knowsToolsLeft = true;
+            }
+        }
     }
     
     public int howManyToolsToRent(){
         return 3;
-    } 
+    }
 
     public int rentDuration(){
         return 7;

@@ -1,4 +1,5 @@
 package com.ooadteamveritas.project3;
+import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -7,11 +8,12 @@ import java.util.concurrent.ThreadLocalRandom;
 */
 
 public abstract class Customer implements Observer{
+    protected Boolean knowsToolsLeft;
     protected String name;
     protected Record record;
     public boolean hasActiveRental;
     protected String custType;
-    protected boolean willShop = true;
+    Observable observable;
     
     public String getName() {
         return this.name;
@@ -29,7 +31,23 @@ public abstract class Customer implements Observer{
     public Record getCustomerRecord(){
         return record;
     }
-    
+
+    //Observer update function - customer knows if there is inventory left
+    public void update(Observable observable, Object arg){
+        if(observable instanceof Store){
+            Store store = (Store)observable;
+            if(store.howManyAvailToolsToRent() < 1){
+                this.knowsToolsLeft = false;
+            }else{
+                this.knowsToolsLeft = true;
+            }
+        }
+    }
+    public Boolean getKnowsToolsLeft(){
+        return this.knowsToolsLeft;
+    }
+
+
     //When Customer is done with a rental transaction
     public void clearRecord(){
         this.record = null;
@@ -37,18 +55,18 @@ public abstract class Customer implements Observer{
     
     //Returns how many tools customer is renting right now  (from their record)
     public int howManyToolsRented(){
-        return record.rentedTools.size();
+        return record.getRentedTools().size();
+    }
+
+    //They can rant 0 - 6 options
+    public int howManyOptionsToRent(){
+        return this.genRandomNum(0,6);
     }
 
     //min -> inclusive
     //max -> inclusive
     protected int genRandomNum(int min,int max){
         return ThreadLocalRandom.current().nextInt(min,max+1);
-    }
-
-    //They can rant 0 - 6 options
-    public int howManyOptionsToRent(){
-        return this.genRandomNum(0,6);
     }
     
     

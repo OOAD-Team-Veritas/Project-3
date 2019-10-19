@@ -23,7 +23,7 @@ public class storeSimulation {
     private int numCustomers;               //For testing (how much of each catergory) 
     private ArrayList<Customer> rentalCustomers;    //Our Customers
     private Store rentalStore ; //The rental store with Tools
-    ArrayList<Record> todaysReturns;
+    private ArrayList<Record> todaysReturns;
     private SimpleToolFactory toolFactory;  //Tool factory
     
     
@@ -67,7 +67,15 @@ public class storeSimulation {
         for(int i=0;i<4;i++){
             Tool newTool = toolFactory.createTool("yardwork", "Yardwork tool" + Integer.toString(i));
             rentalStore.addTool(newTool);
-        }        
+        }
+        
+        //Add all customers as Observers
+        for(Customer customer : rentalCustomers){
+            rentalStore.addObserver(customer);
+        }
+
+        //Set isInventory as true
+        rentalStore.setIsInventory(true);
     }
     
     /*
@@ -82,21 +90,15 @@ public class storeSimulation {
         
         //Loop for the nights in the simulation...
         for(int i = 0; i < simulationNights; i++){
+
             /********************************************************
-                Start of Day
+                                Start of Day
             /********************************************************/
-
-            //Check if a record has 0 in daysuntildue
-                //If so... then we call end rental in store
-                    
-            
-
-
-            ////start of day////
             
             //Clear yesterday's rentals
             todaysReturns.clear();
-            //All customers return to store if needed to return tools
+
+            //All customers return to store if need to return tools
             for(Customer customer : rentalCustomers){
                 Record record = customer.getCustomerRecord();
                 if (record.getNightsUntilDue() == 0){
@@ -219,7 +221,7 @@ public class storeSimulation {
     }
     
     private void decrementAllRecords(){
-        for(Record record : rentalStore.currentRentalRecords){
+        for(Record record : rentalStore.getCurrentRentalRecords()){
             record.decrementNightsUntilDue();
         }
     }
