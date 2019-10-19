@@ -371,13 +371,13 @@ public class storeSimulation {
         int numBusiness = 0;
 
         //Count the # of each customer type in past records
-        numBusiness = howManyCustomerTypeRecords("business", rentalStore.getCurrentRentalRecords());
-        numRegular = howManyCustomerTypeRecords("regular", rentalStore.getCurrentRentalRecords());
-        numCasual = howManyCustomerTypeRecords("casual", rentalStore.getCurrentRentalRecords());
+        numBusiness = howManyCustomerTypeRecords("business", rentalStore.getPastRentalRecord());
+        numRegular = howManyCustomerTypeRecords("regular", rentalStore.getPastRentalRecord());
+        numCasual = howManyCustomerTypeRecords("casual", rentalStore.getPastRentalRecord());
 
-        sb.append("Number of Casual customers that rented: " + numCasual + "\n");
-        sb.append("Number of Regular customers that rented: " + numRegular + "\n");
-        sb.append("Number of Business customers that rented: " + numBusiness + "\n");
+        sb.append("Number of completed rentals by Casual customers: " + numCasual + "\n");
+        sb.append("Number of completed rentals by Regular customers: " + numRegular + "\n");
+        sb.append("Number of completed rentals by Business customers: " + numBusiness + "\n");
         sb.append("Total amount of money the store has made for " + (simulationNights+1) + " days: " + rentalStore.getFinalTotalRevenue() + "\n");
 
         //Print the total amount of money the store as made
