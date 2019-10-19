@@ -23,7 +23,7 @@ public class storeSimulation {
     private int numCustomers;               //For testing (how much of each catergory) 
     private ArrayList<Customer> rentalCustomers;    //Our Customers
     private Store rentalStore ; //The rental store with Tools
-    ArrayList<Record> todaysReturns;
+    private ArrayList<Record> todaysReturns;
     private SimpleToolFactory toolFactory;  //Tool factory
     
     
@@ -68,7 +68,15 @@ public class storeSimulation {
         for(int i=1;i<=4;i++){
             Tool newTool = toolFactory.createTool("yardwork", "Yardwork tool " + Integer.toString(i));
             rentalStore.addTool(newTool);
-        }        
+        }
+        
+        //Add all customers as Observers
+        for(Customer customer : rentalCustomers){
+            rentalStore.addObserver(customer);
+        }
+
+        //Set isInventory as true
+        rentalStore.setIsInventory(true);
     }
     
     /*
@@ -81,7 +89,7 @@ public class storeSimulation {
         Customer selectedCustomer;
         ArrayList<Customer> selectedDayCustomers = new ArrayList<Customer>();    
         
-        //Loop for the nights in the simulation... (main loop)
+        //Loop for the nights in the simulation...
         for(int i = 0; i < simulationNights; i++){
             //Clear today's revenue
             rentalStore.clearDayRevenue();
@@ -89,7 +97,10 @@ public class storeSimulation {
             //Clear yesterday's rental loop
             todaysReturns.clear();
             
-            //All customers return to store if needed to return tools
+            //Clear yesterday's rentals
+            todaysReturns.clear();
+
+            //All customers return to store if need to return tools
             for(Customer customer : rentalCustomers){
 
                 //Check if the customer has an active rental
@@ -175,8 +186,12 @@ public class storeSimulation {
                         //System.out.println("Customer is renting " + cust.howManyToolsRented() + " tools.");
 
                         //Account for situations where customer alreay rented some tools (max is 3...)
-                        if(cust.howManyToolsRented() < 3){
-                            howManyMoreTools(cust.howManyToolsRented());
+                        if(cust.howManyToolsRented() < cust.getMaxTools()){
+                            numOfTools = howManyMoreTools(cust.howManyToolsRented(), cust);
+                            //Business customer won't get here unless they have 0 tools
+                            if(cust.getCustType() == "business"){
+                                numOfTools = 3;
+                            }
                         }else{
                             numOfTools = 0;
                         }
@@ -246,7 +261,7 @@ public class storeSimulation {
     }
     
     private void decrementAllRecords(){
-        for(Record record : rentalStore.currentRentalRecords){
+        for(Record record : rentalStore.getCurrentRentalRecords()){
             record.decrementNightsUntilDue();
         }
     }
@@ -360,13 +375,13 @@ public class storeSimulation {
         int numBusiness = 0;
 
         //Count the # of each customer type in past records
-        numBusiness = howManyCustomerTypeRecords("business", rentalStore.getCurrentRentalRecords());
-        numRegular = howManyCustomerTypeRecords("regular", rentalStore.getCurrentRentalRecords());
-        numCasual = howManyCustomerTypeRecords("casual", rentalStore.getCurrentRentalRecords());
+        numBusiness = howManyCustomerTypeRecords("business", rentalStore.getPastRentalRecord());
+        numRegular = howManyCustomerTypeRecords("regular", rentalStore.getPastRentalRecord());
+        numCasual = howManyCustomerTypeRecords("casual", rentalStore.getPastRentalRecord());
 
-        sb.append("Number of Casual customers that rented: " + numCasual + "\n");
-        sb.append("Number of Regular customers that rented: " + numRegular + "\n");
-        sb.append("Number of Business customers that rented: " + numBusiness + "\n");
+        sb.append("Number of completed rentals by Casual customers: " + numCasual + "\n");
+        sb.append("Number of completed rentals by Regular customers: " + numRegular + "\n");
+        sb.append("Number of completed rentals by Business customers: " + numBusiness + "\n");
         sb.append("Total amount of money the store has made for " + (simulationNights+1) + " days: " + rentalStore.getFinalTotalRevenue() + "\n");
 
         //Print the total amount of money the store as made
@@ -393,9 +408,9 @@ public class storeSimulation {
         }
     }
 
-    private int howManyMoreTools(int currentNumOfTools){
+    private int howManyMoreTools(int currentNumOfTools, Customer cust){
         int rand = 0;
-        int max = 3 - currentNumOfTools;
+        int max = cust.getMaxTools() - currentNumOfTools;
         rand = genRandomNum(1,max);
         return rand;
     }

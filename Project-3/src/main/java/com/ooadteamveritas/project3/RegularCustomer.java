@@ -9,6 +9,7 @@ public class RegularCustomer extends Customer {
         this.name = name;
         this.hasActiveRental = false;
         this.custType = "regular";
+        this.maxTools = 3;
     }
     
     public int howManyToolsToRent(){

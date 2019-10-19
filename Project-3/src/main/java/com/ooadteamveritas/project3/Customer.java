@@ -1,15 +1,20 @@
 package com.ooadteamveritas.project3;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.concurrent.ThreadLocalRandom;
 
 /*
     The count of tools is determined by looking at the record...
 */
 
-public abstract class Customer {
+public abstract class Customer implements Observer{
+    protected Boolean knowsToolsLeft;
     protected String name;
     protected Record record;
     public boolean hasActiveRental;
     protected String custType;
+    Observable observable;
+    protected int maxTools;
     
     public String getName() {
         return this.name;
@@ -17,6 +22,10 @@ public abstract class Customer {
     
     public String getCustType(){
         return this.custType;
+    }
+
+    public int getMaxTools(){
+        return this.maxTools;
     }
     
     //Set set this every rental period
@@ -27,7 +36,23 @@ public abstract class Customer {
     public Record getCustomerRecord(){
         return record;
     }
-    
+
+    //Observer update function - customer knows if there is inventory left
+    public void update(Observable observable, Object arg){
+        if(observable instanceof Store){
+            Store store = (Store)observable;
+            if(store.howManyAvailToolsToRent() < 1){
+                this.knowsToolsLeft = false;
+            }else{
+                this.knowsToolsLeft = true;
+            }
+        }
+    }
+    public Boolean getKnowsToolsLeft(){
+        return this.knowsToolsLeft;
+    }
+
+
     //When Customer is done with a rental transaction
     public void clearRecord(){
         this.record = null;
@@ -36,18 +61,18 @@ public abstract class Customer {
     
     //Returns how many tools customer is renting right now  (from their record)
     public int howManyToolsRented(){
-        return record.rentedTools.size();
+        return record.getRentedTools().size();
+    }
+
+    //They can rant 0 - 6 options
+    public int howManyOptionsToRent(){
+        return this.genRandomNum(0,6);
     }
 
     //min -> inclusive
     //max -> inclusive
     protected int genRandomNum(int min,int max){
         return ThreadLocalRandom.current().nextInt(min,max+1);
-    }
-
-    //They can rant 0 - 6 options
-    public int howManyOptionsToRent(){
-        return this.genRandomNum(0,6);
     }
     
     
@@ -66,17 +91,7 @@ public abstract class Customer {
         int randomNum;
         for(int i=0; i < n; i++){
             randomNum = genRandomNum(0, 2);
-            switch(randomNum){
-                case 0:
-                    record.addStoreOption(0);
-                    break;
-                case 1:
-                    record.addStoreOption(1);
-                    break;
-                case 2:
-                    record.addStoreOption(2);
-                    break;
-            }
+            record.addStoreOption(randomNum);
         }
     }
 

@@ -9,8 +9,8 @@ import java.util.Observable;
 public class Store extends Observable {
     private static Store uniqueInstance;
     private boolean isInventory;
-    public ArrayList<Tool> inventory;
-    public ArrayList<Record> currentRentalRecords;
+    private ArrayList<Tool> inventory;
+    private ArrayList<Record> currentRentalRecords;
     private ArrayList<Record> pastRentalRecords;
     private double dayRevenue;          //Revenue generated each day
     private double totalRevenue;        //Total revenue
@@ -31,10 +31,64 @@ public class Store extends Observable {
         return uniqueInstance;
     }
 
+    /*
+    ============================================================================
+                                    Inventory
+        Includes the Observable functions.
+    ============================================================================
+    */
     public ArrayList<Tool> getInventory(){
         return this.inventory;
     }
 
+    //Adds a tool to the inventory (used by simulation)
+    public void addTool(Tool newTool){
+        this.inventory.add(newTool);
+    }
+
+    //These two functions implement the Observable class - are there tools in the Store's inventory
+    public void setIsInventory(boolean n){
+        this.isInventory = n;
+        this.setChanged();
+        this.notifyObservers();
+    }
+
+    public boolean getIsInventory(){
+        return this.isInventory;
+    }
+
+    //Returns the count of tools that can be rented
+    public int howManyAvailToolsToRent(){
+        int count = 0;
+        for(Tool tool : inventory){
+            if(tool.isRented() == false)
+                count++;
+        }
+        return count;
+    }
+
+    //don't forget to add observer here, this function shouldn't be included in the end product
+    //Checks if there is available inventoy to rent (at least one)
+    public void checkIfAvailInventory(){
+        int avail = 0;
+        for(Tool tool : inventory){
+            if(tool.isRented() == false)
+                avail += 1;
+        }
+        if(avail < 1){
+            this.setIsInventory(false);
+        }
+        else if(avail < 3){
+            this.setChanged();
+            this.notifyObservers();
+        }
+    }
+
+    /*
+    ============================================================================
+                            Current and Past Records
+    ============================================================================
+    */
     public ArrayList<Record> getCurrentRentalRecords(){
         return this.currentRentalRecords;
     }
@@ -43,52 +97,18 @@ public class Store extends Observable {
         return this.pastRentalRecords;
     }
 
+    public void addRentalRecord(Record rec){
+        currentRentalRecords.add(rec);
+    }
+    //Algorithm for ending a rental and cleaning up Records
     public void endRental(Record record){
         this.currentRentalRecords.remove(record);
         this.pastRentalRecords.add(record);
         record.getCustomer().clearRecord();
-        for(Tool tool: record.rentedTools){
+        for(Tool tool: record.getRentedTools()){
             tool.rentedOut = false;
         }
-    }
-
-    public void setValue(boolean n){
-        this.isInventory = n;
-        setChanged();
-        notifyObservers();
-    }
-    public boolean getValue(){
-        return this.isInventory;
-    }
-
-    public void addRentalRecord(Record rec){
-        currentRentalRecords.add(rec);
-    }
-    
-    //Adds a tool to the inventory (used by simulation)
-    public void addTool(Tool newTool){
-        this.inventory.add(newTool);
-    }
-    
-    //Checks if there is available inventoy to rent (at least one)
-    public boolean checkIfAvailInventory(){
-        boolean avail = false;
-        for(Tool tool : this.inventory){
-            if(tool.isRented() == false)
-                avail = true;
-        }
-        return avail;
-    }
-    
-    //Returns the count of tools that can be rented
-    public int howManyAvailToolsToRent(){
-        int count = 0;
-        for(Tool tool : inventory){
-            if(tool.isRented() == false){
-                count++;
-            }
-        }
-        return count;
+        this.setIsInventory(true);
     }
 
     /*
@@ -109,6 +129,7 @@ public class Store extends Observable {
                     count++;
                     selectedTools.add(tool);
                     tool.rent();
+                    this.checkIfAvailInventory();
                 }     
             }
         }
@@ -147,6 +168,7 @@ public class Store extends Observable {
                             canCustomerEnterStore
     ============================================================================
     */
+
     public boolean canCustomerEnterStore(Customer cust){
         boolean result = true;
 
@@ -156,23 +178,10 @@ public class Store extends Observable {
                 result = false;
             }
         }
-        
-        if(cust.getCustType() == "business"){
-            //We have a business cusotmer...
-            if(howManyAvailToolsToRent() < 3){
-                result = false;
-            }
-        }else if(cust.getCustType() == "regular"){
-            //We have a regualar cusotmer...
-            if(checkIfAvailInventory() == false){
-                result = false;
-            }  
-        }else if(cust.getCustType() == "casual"){
-            //We have a casual cusotmer...
-            if(checkIfAvailInventory() == false){
-                result = false;
-            }  
+        if (cust.getKnowsToolsLeft() != true){
+            result = false; 
         }
         return result;
     }
 }
+
