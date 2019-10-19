@@ -16,7 +16,8 @@ public class Record{
     public Record(){
         totalCost = 0;
         rentDuration = 0;
-        
+        nightsUntilDue = 0;
+
         //Add the options
         options.add(new ExtensionCord());
         options.add(new AccessoryKit());
@@ -67,12 +68,15 @@ public class Record{
         return this.totalCost;
     }
     
+    //Sets the nightsUntilDue counter and the rentDuration var
     public void setNightsUntilDue(int nights){
         this.nightsUntilDue = nights;
+        this.rentDuration = nights;
+
     }
 
     public void decrementNightsUntilDue(){
-        this.nightsUntilDue = this.nightsUntilDue-1;
+        this.nightsUntilDue--;
     }
 
     public int getNightsUntilDue(){

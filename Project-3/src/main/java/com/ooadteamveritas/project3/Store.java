@@ -45,7 +45,7 @@ public class Store extends Observable {
     //These two functions implement the Observable class - are there tools in the Store's inventory
     public void setIsInventory(boolean n){
         this.isInventory = n;
-        setChanged();
+        this.setChanged();
         notifyObservers();
     }
 
@@ -66,13 +66,17 @@ public class Store extends Observable {
     //don't forget to add observer here, this function shouldn't be included in the end product
     //Checks if there is available inventoy to rent (at least one)
     public void checkIfAvailInventory(){
-        boolean avail = false;
+        int avail = 0;
         for(Tool tool : inventory){
             if(tool.isRented() == false)
-                avail = true;
+                avail += 1;
         }
-        if(getIsInventory() != avail){
-            setIsInventory(avail);
+        if(avail < 1){
+            this.setIsInventory(false);
+        }
+        else if(avail < 3){
+            this.setChanged();
+            this.notifyObservers();
         }
     }
 
@@ -87,6 +91,10 @@ public class Store extends Observable {
 
     public ArrayList<Record> getPastRentalRecord(){
         return this.pastRentalRecords;
+    }
+
+    public void addRentalRecord(Record rec){
+        currentRentalRecords.add(rec);
     }
     //Algorithm for ending a rental and cleaning up Records
     public void endRental(Record record){
@@ -105,8 +113,6 @@ public class Store extends Observable {
         returns as an ArrayList of tools
     ============================================================================
     */
-
-    ////add checkifAvailabletools here to check each time after tool.rent()
     public ArrayList<Tool> selectedNTools(int n){
         int count = 0;
         ArrayList<Tool> selectedTools = new ArrayList<Tool>();
@@ -117,6 +123,8 @@ public class Store extends Observable {
                 if(count < n){
                     count++;
                     selectedTools.add(tool);
+                    tool.rent();
+                    this.checkIfAvailInventory();
                 }     
             }
         }
@@ -144,3 +152,4 @@ public class Store extends Observable {
         return result;
     }
 }
+

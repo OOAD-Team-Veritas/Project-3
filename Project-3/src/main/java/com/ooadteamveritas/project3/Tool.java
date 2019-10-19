@@ -29,6 +29,10 @@ public abstract class Tool {
     }
     
     public boolean isRented(){
-        return rentedOut;
+        return this.rentedOut;
+    }
+
+    public void rent(){
+        rentedOut = true;
     }
 }
