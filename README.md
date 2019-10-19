@@ -18,7 +18,7 @@ Riad Shash (Ray)
 [out.txt](/Project-3/out.txt)
 
 ## PDF Report & UML Class Diagram
-[Project-3 PDF Portion.pdf](/Project-3 PDF Portion.pdf)
+Located in root directory 
 
 ## JUnit tests:
 [JUnit test class](/Project-3/src/test/java/com/ooadteamveritas/project3)
