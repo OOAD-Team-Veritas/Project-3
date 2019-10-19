@@ -7,14 +7,18 @@ Elizabeth Robinson
 Riad Shash (Ray)
 
 ## Pattern usage:
-+ Simple Factory Pattern used to create tools.
-+ Store uses Singleton Pattern
++ Simple Factory -> To create Tools needed for the simulation
++ Singleton -> To make sure we have one & only one instance of Store
++ Observer -> To determine if customers can enter the store
 
-Our Java classes
+## Java classes
 [project3 Classes](/Project-3/src/main/java/com/ooadteamveritas/project3)
 
 ## Output file:
 [out.txt](/Project-3/out.txt)
 
+## PDF Report & UML Class Diagram
+[Project-3 PDF Portion.pdf](/Project-3 PDF Portion.pdf)
+
 ## JUnit tests:
-[JUnit test classes](/Project-3/src/test/java/com/ooadteamveritas/project3)
+[JUnit test class](/Project-3/src/test/java/com/ooadteamveritas/project3)
