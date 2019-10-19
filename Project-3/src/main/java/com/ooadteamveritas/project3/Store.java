@@ -46,7 +46,7 @@ public class Store extends Observable {
     public void setIsInventory(boolean n){
         this.isInventory = n;
         this.setChanged();
-        notifyObservers();
+        this.notifyObservers();
     }
 
     public boolean getIsInventory(){

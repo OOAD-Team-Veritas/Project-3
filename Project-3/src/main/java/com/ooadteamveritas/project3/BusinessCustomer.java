@@ -12,6 +12,7 @@ public class BusinessCustomer extends Customer {
         this.name = name;
         this.hasActiveRental = false;
         this.custType = "business";
+        this.maxTools = 3;
     }
 
     @Override

@@ -14,6 +14,7 @@ public abstract class Customer implements Observer{
     public boolean hasActiveRental;
     protected String custType;
     Observable observable;
+    protected int maxTools;
     
     public String getName() {
         return this.name;
@@ -21,6 +22,10 @@ public abstract class Customer implements Observer{
     
     public String getCustType(){
         return this.custType;
+    }
+
+    public int getMaxTools(){
+        return this.maxTools;
     }
     
     //Set set this every rental period

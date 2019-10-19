@@ -185,7 +185,7 @@ public class storeSimulation {
                         //System.out.println("Customer is renting " + cust.howManyToolsRented() + " tools.");
 
                         //Account for situations where customer alreay rented some tools (max is 3...)
-                        if(cust.howManyToolsRented() < 3){
+                        if(cust.howManyToolsRented() < cust.getMaxTools()){
                             howManyMoreTools(cust.howManyToolsRented());
                         }else{
                             numOfTools = 0;

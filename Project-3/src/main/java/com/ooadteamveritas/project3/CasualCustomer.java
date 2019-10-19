@@ -10,6 +10,7 @@ public class CasualCustomer extends Customer {
         this.name = name;
         this.hasActiveRental = false;
         this.custType = "casual";
+        this.maxTools = 2;
     }
 
     public int howManyToolsToRent(){
